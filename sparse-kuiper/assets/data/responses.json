@@ -1,0 +1,126 @@
+{
+  "topics": {
+    "salary": {
+      "keywords": ["salary", "pay", "paid", "payment", "delayed", "late", "money", "owed", "wage", "wages", "compensation", "remuneration", "arrears", "payslip"],
+      "responses": [
+        {
+          "text": "Delayed salary is one of the most stressful experiences a Kenyan worker can face, and you are not alone. Under the <strong>Employment Act 2007 (Section 17)</strong>, your employer is legally required to pay your wages on or before the agreed payday. If your salary has been delayed for more than 7 days, you have the right to file a complaint with the Ministry of Labour.\n\n<strong>Practical steps you can take right now:</strong>\n• Document every delayed payment (dates, amounts owed)\n• Send a formal written request to your HR department or employer\n• If unresolved, file a complaint with the Ministry of Labour: +254 020 2729800\n• Contact COTU Kenya for union guidance: +254 020 6762766\n\nYour financial stress is valid. Many Kenyan professionals face this, and it does not reflect your worth.",
+          "followUps": ["What are my legal rights?", "How do I manage financial stress?", "I need urgent help"]
+        },
+        {
+          "text": "Living with salary uncertainty takes a toll on your mental health, your family, and your sense of security. Research shows that financial stress is the <strong>#1 predictor of workplace anxiety</strong> in East Africa.\n\n<strong>While you navigate this situation:</strong>\n• Prioritise essential expenses and communicate with creditors about temporary delays\n• Avoid high-interest mobile loans (Fuliza, Tala) as a long-term solution — they compound the stress\n• Speak with a trusted colleague — you may find others in the same situation\n• Consider joining a SACCO for emergency financial support\n\nRemember: your employer's failure to pay is <strong>their</strong> legal breach, not your personal failing.",
+          "followUps": ["How do I set boundaries at work?", "Take the burnout assessment", "View crisis resources"]
+        }
+      ]
+    },
+    "harassment": {
+      "keywords": ["harass", "harassment", "bully", "bullying", "bullied", "hostile", "intimidation", "intimidate", "threatened", "threat", "abuse", "abused", "abusive", "discrimination", "discriminated", "sexual", "assault", "inappropriate", "groping", "touching"],
+      "responses": [
+        {
+          "text": "What you are describing sounds extremely difficult, and I want you to know that <strong>no one deserves to be treated this way at work</strong>. Workplace harassment is illegal in Kenya under the <strong>Employment Act 2007 (Section 6)</strong> and the <strong>Sexual Offences Act 2006</strong>.\n\n<strong>Your immediate options:</strong>\n• Document every incident in detail (date, time, witnesses, what was said/done)\n• Report to your internal grievance committee or HR department in writing\n• If internal channels are unsafe, file directly with the Ministry of Labour\n• For sexual harassment: report to the nearest police Gender Desk or contact FIDA Kenya: +254 720 258 258\n\n<strong>Your safety comes first.</strong> If you feel physically unsafe, remove yourself from the situation immediately.",
+          "followUps": ["What are my legal rights?", "I need urgent help", "How do I document incidents?"]
+        },
+        {
+          "text": "Workplace bullying often happens gradually — it starts as 'tough management' and escalates into something that erodes your confidence and wellbeing. In Kenya's hierarchical corporate culture, many employees suffer in silence because they fear retaliation.\n\n<strong>Signs that what you are experiencing is harassment:</strong>\n• Persistent criticism that is personal rather than professional\n• Being deliberately excluded from meetings or decisions\n• Having your work sabotaged or undermined\n• Threats to your job security for raising concerns\n\n<strong>What you can do:</strong>\n• Keep a private journal of incidents (use your personal phone, not work email)\n• Identify allies — trusted colleagues who have witnessed the behaviour\n• Seek confidential support from a counsellor before making formal complaints\n\nYou have every right to a safe and dignified workplace.",
+          "followUps": ["How do I manage the stress?", "Take the burnout assessment", "Talk about something else"]
+        }
+      ]
+    },
+    "burnout": {
+      "keywords": ["burnout", "burned", "burnt", "exhausted", "exhaustion", "tired", "fatigue", "fatigued", "overwhelmed", "overworked", "drained", "depleted", "cant cope", "can't cope", "breaking down", "breakdown", "no energy", "unmotivated", "motivation"],
+      "responses": [
+        {
+          "text": "What you are describing sounds like burnout, and recognising it is actually the first and most important step. Burnout is not a personal weakness — the <strong>World Health Organisation</strong> classifies it as an occupational phenomenon caused by chronic workplace stress that has not been successfully managed.\n\n<strong>The three dimensions of burnout:</strong>\n• <strong>Emotional exhaustion</strong> — feeling drained before your day even starts\n• <strong>Cynicism</strong> — detachment or negativity towards your work and colleagues\n• <strong>Reduced efficacy</strong> — feeling like nothing you do matters\n\n<strong>Immediate recovery strategies:</strong>\n• Implement 'micro-recovery' breaks: 5 minutes of deep breathing every 2 hours\n• Protect your sleep — aim for 7 hours minimum, even if it means leaving tasks undone\n• Say 'no' to one non-essential commitment this week\n• Move your body: even a 15-minute walk during lunch significantly reduces cortisol",
+          "followUps": ["Take the burnout assessment", "How do I talk to my manager?", "View self-care strategies"]
+        },
+        {
+          "text": "The Nairobi grind culture tells us that working 12-hour days and being 'always on' is a badge of honour. But the research is clear: <strong>chronic overwork reduces your productivity by up to 40%</strong> and increases your risk of heart disease, depression, and relationship breakdown.\n\n<strong>Reclaiming your energy:</strong>\n• <strong>Audit your week:</strong> Write down everything you do for 3 days. Identify tasks that drain you vs. energise you\n• <strong>Set digital boundaries:</strong> Turn off work notifications after 7pm. Your employer's emergency is not your 24/7 obligation\n• <strong>Reconnect with purpose:</strong> Why did you start this career? What would 'meaningful work' look like for you?\n• <strong>Seek professional support:</strong> A therapist can help you develop personalised coping strategies\n\nBurnout recovery is not instant — it is a process. Be patient with yourself.",
+          "followUps": ["How do I set boundaries?", "I think I need professional help", "Take the burnout assessment"]
+        }
+      ]
+    },
+    "toxic-leadership": {
+      "keywords": ["boss", "manager", "supervisor", "management", "toxic", "micromanage", "micromanaging", "controlling", "unfair", "favouritism", "favoritism", "nepotism", "power", "authority", "dictator", "autocratic", "unreasonable"],
+      "responses": [
+        {
+          "text": "Dealing with a toxic manager is one of the most isolating workplace experiences because the person causing harm is often the person you are supposed to go to for support. Research shows that <strong>75% of employees who leave their jobs cite their direct manager</strong> as the primary reason.\n\n<strong>Strategies for navigating this situation:</strong>\n• <strong>Document everything:</strong> Keep records of unreasonable demands, contradictory instructions, or humiliating behaviour\n• <strong>Communicate in writing:</strong> Follow up verbal instructions with email summaries ('Just to confirm what we discussed...')\n• <strong>Build lateral relationships:</strong> Connect with peers and other managers who can provide perspective and support\n• <strong>Know your escalation path:</strong> Identify who your manager's supervisor is, and understand your company's grievance procedure\n\nYou deserve leadership that supports your growth, not leadership that undermines it.",
+          "followUps": ["How do I protect my mental health?", "What are my legal rights?", "Should I consider leaving?"]
+        },
+        {
+          "text": "In many Kenyan workplaces, hierarchical culture makes it feel impossible to challenge a manager, even when their behaviour is clearly wrong. There is often an unspoken rule: <strong>'respect your seniors, even when they disrespect you.'</strong> But respect must be mutual.\n\n<strong>When your manager's behaviour crosses the line:</strong>\n• Constant public criticism or humiliation = <strong>bullying</strong> (legally actionable)\n• Threats of termination for legitimate complaints = <strong>constructive dismissal</strong>\n• Demanding personal favours or after-hours availability = <strong>boundary violation</strong>\n• Blocking your promotion for personal reasons = <strong>unfair labour practice</strong>\n\nUnder the Employment Act, you have the right to dignified treatment. If internal reporting feels unsafe, external options include the Ministry of Labour and professional legal counsel.\n\nYour mental health matters more than any job title.",
+          "followUps": ["Take the burnout assessment", "I need urgent help", "How do I set boundaries?"]
+        }
+      ]
+    },
+    "legal-rights": {
+      "keywords": ["rights", "legal", "law", "laws", "employment act", "labour", "labor", "contract", "termination", "fired", "sacked", "dismissed", "dismissal", "unfair", "redundancy", "retrenched", "retrenchment", "notice", "leave", "annual leave", "sick leave", "maternity"],
+      "responses": [
+        {
+          "text": "Understanding your rights is empowering. Here is a summary of your key protections under Kenyan law:\n\n<strong>Employment Act 2007 — Key Provisions:</strong>\n• <strong>Section 17:</strong> Wages must be paid on or before the agreed date\n• <strong>Section 27:</strong> You are entitled to minimum 21 working days of annual leave per year\n• <strong>Section 28:</strong> Sick leave — 7+ days with full pay, then 7 days at half pay (with medical certificate)\n• <strong>Section 29:</strong> Maternity leave — 3 months with full pay\n• <strong>Section 35:</strong> Notice of termination — minimum 1 month (or payment in lieu)\n• <strong>Section 45:</strong> Unfair termination — you can file a claim with the Employment and Labour Relations Court\n• <strong>Section 6:</strong> Protection against discrimination and harassment\n\n<strong>Where to seek help:</strong>\n• Ministry of Labour: +254 020 2729800\n• COTU Kenya (trade union): +254 020 6762766\n• FIDA Kenya (women's legal aid): +254 720 258 258\n• Law Society of Kenya (pro bono referrals): +254 020 271 4694",
+          "followUps": ["My salary has been delayed", "I am facing harassment", "I need urgent help"]
+        }
+      ]
+    },
+    "self-care": {
+      "keywords": ["self care", "self-care", "wellbeing", "wellness", "health", "healthy", "cope", "coping", "relax", "relaxation", "stress management", "meditation", "exercise", "sleep", "rest", "balance", "work-life", "work life"],
+      "responses": [
+        {
+          "text": "Taking care of your mental health is not a luxury — it is a necessity. Here are evidence-based strategies that work, even with a demanding Kenyan work schedule:\n\n<strong>Daily Micro-Practices (5-10 mins each):</strong>\n• <strong>Box breathing:</strong> Inhale 4 counts, hold 4, exhale 4, hold 4. Repeat 4 times. This activates your parasympathetic nervous system\n• <strong>Gratitude journaling:</strong> Write 3 things that went well today. Research shows this rewires your brain towards positivity over 21 days\n• <strong>Body scan:</strong> Close your eyes and mentally scan from head to toe. Notice tension without judging it\n\n<strong>Weekly Habits:</strong>\n• Move your body 3x per week (walking counts — take the stairs, walk during lunch)\n• Have at least one meal without your phone\n• Connect meaningfully with someone outside of work\n• Spend time outdoors — even 20 minutes in nature reduces cortisol by 10%\n\n<strong>Monthly Check-ins:</strong>\n• Review your stress levels honestly — are things improving or getting worse?\n• Adjust your boundaries as needed\n• Consider professional counselling, even when things feel 'manageable'",
+          "followUps": ["Take the burnout assessment", "How do I set boundaries?", "I need more support"]
+        }
+      ]
+    },
+    "boundaries": {
+      "keywords": ["boundary", "boundaries", "say no", "saying no", "overcommit", "overcommitted", "people pleaser", "after hours", "weekend work", "overtime", "extra work", "workload", "too much", "capacity", "stretched", "pressure"],
+      "responses": [
+        {
+          "text": "Setting boundaries at work is one of the hardest but most important skills for your long-term wellbeing. In Kenyan workplace culture, saying 'no' can feel disrespectful, but <strong>boundaries are not about disrespect — they are about sustainability</strong>.\n\n<strong>How to set boundaries professionally:</strong>\n• <strong>The 'Yes, and' technique:</strong> 'Yes, I can take this on, and I will need to deprioritise X to do it well. Which would you prefer?'\n• <strong>The time boundary:</strong> 'I am available until 6pm. I will action this first thing tomorrow morning.'\n• <strong>The capacity check:</strong> 'I want to deliver quality work. My current load is at capacity — can we discuss priorities?'\n• <strong>The redirect:</strong> 'I am not the best person for this task. May I suggest [colleague] who has the right expertise?'\n\n<strong>Remember:</strong>\n• You are not saying 'no' to the person — you are saying 'yes' to your health\n• Boundaries feel uncomfortable at first. That does not mean they are wrong\n• A good employer respects employees who manage their capacity honestly\n• Under the Employment Act, standard working hours are 52 hours per week. Beyond this requires overtime compensation",
+          "followUps": ["I am feeling burned out", "How do I talk to my manager?", "View self-care strategies"]
+        }
+      ]
+    },
+    "career-transition": {
+      "keywords": ["resign", "resignation", "quit", "quitting", "leave job", "new job", "career change", "looking for work", "job search", "unemployed", "considering leaving", "should i leave", "moving on"],
+      "responses": [
+        {
+          "text": "Considering a career change is a significant decision, and it is natural to feel conflicted. The fact that you are thinking about it deserves honest reflection, not impulsive action.\n\n<strong>Before you decide, ask yourself:</strong>\n• Is the problem with <strong>this specific workplace</strong>, or with <strong>the type of work</strong> itself?\n• Have you exhausted internal options? (Transfer, role change, manager conversation)\n• Do you have a financial runway? Experts recommend 3-6 months of expenses saved before resigning\n• What would your ideal work life actually look like?\n\n<strong>If you decide to leave:</strong>\n• <strong>Notice period:</strong> Check your contract — typically 1 month under Kenyan law (Section 35, Employment Act)\n• <strong>Outstanding entitlements:</strong> Unpaid leave, NSSF, NHIF, pension, gratuity — calculate what you are owed\n• <strong>Exit gracefully:</strong> Avoid burning bridges. Kenya's professional community is small\n• <strong>Seek references:</strong> Ask before you leave, not after\n\nThere is no shame in outgrowing a workplace. Growth often requires change.",
+          "followUps": ["What are my legal rights?", "How do I manage the stress?", "Take the burnout assessment"]
+        }
+      ]
+    },
+    "family-work": {
+      "keywords": ["family", "children", "kids", "childcare", "parenting", "parent", "spouse", "husband", "wife", "marriage", "relationship", "home", "household", "domestic", "caregiver", "caring", "elderly"],
+      "responses": [
+        {
+          "text": "Balancing work demands with family responsibilities is one of the most universal challenges, and in Kenya, where extended family obligations are strong, the pressure can feel enormous.\n\n<strong>Common pain points Kenyan professionals report:</strong>\n• Guilt about not being present enough for children\n• Financial pressure to support extended family on a single salary\n• Relationship strain from long commutes and after-hours work\n• Lack of affordable, quality childcare options\n\n<strong>Practical strategies:</strong>\n• <strong>Protected family time:</strong> Block specific hours (e.g., 6-8pm) as non-negotiable family time. Communicate this to your team\n• <strong>Shared responsibility:</strong> Have an honest conversation with your partner about workload distribution at home\n• <strong>Extended family boundaries:</strong> It is okay to say 'I cannot help financially right now' without detailed explanations\n• <strong>Employer support:</strong> Many Kenyan employers offer flexible working arrangements — ask HR about your options\n\nYour family needs you healthy, not just busy.",
+          "followUps": ["How do I set boundaries?", "I am feeling burned out", "View self-care strategies"]
+        }
+      ]
+    },
+    "general": {
+      "keywords": [],
+      "responses": [
+        {
+          "text": "Thank you for sharing. Workplace challenges affect every part of our lives, and talking about them is an important first step.\n\nI can help you explore several areas. What resonates most with you right now?",
+          "followUps": ["I am feeling burned out", "I have a salary issue", "I am dealing with a difficult boss", "Take the burnout assessment"]
+        },
+        {
+          "text": "I hear you. Every workplace experience is unique, and I want to make sure I point you towards the most relevant support.\n\nCould you tell me more about what you are going through? Or feel free to choose one of the topics below:",
+          "followUps": ["My rights as an employee", "Self-care and stress management", "Work-life balance", "I need urgent help"]
+        }
+      ]
+    }
+  },
+  "topicActions": {
+    "topic-salary": "salary",
+    "topic-harassment": "harassment",
+    "topic-burnout": "burnout",
+    "topic-toxic-leadership": "toxic-leadership",
+    "show-resources": "resources",
+    "show-legal-rights": "legal-rights"
+  },
+  "resources": {
+    "text": "<strong>📚 Recommended Resources</strong>\n\nExplore our curated knowledge hub for in-depth guidance:\n\n• <a href='resources/your-wellness.html'>Your Personal Wellness</a> — Evidence-based strategies for managing stress\n• <a href='resources/families.html'>Families & Careers</a> — Navigating work-life balance in Kenya\n• <a href='resources/healthy-business.html'>The Healthy Business</a> — What good workplace culture looks like\n• <a href='resources/corporate-emotional-valves.html'>Corporate Pressure Valves</a> — Understanding systemic workplace stress\n• <a href='resources/managing-workforce.html'>Managing the Workforce</a> — Leadership and team wellbeing\n• <a href='resources/generational-gap.html'>Generational Dynamics</a> — Bridging workplace generational divides\n• <a href='resources/why-wellness.html'>Philosophy of Work</a> — Rethinking what work means\n\nWould you like to explore a specific topic?",
+    "followUps": ["Take the burnout assessment", "Talk about a workplace issue", "I need urgent help"]
+  }
+}

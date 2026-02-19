@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Hub | Workplace Wellness Africa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        /* Media Hero */
+        .media-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)),
+                url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 12rem 0 8rem;
+            color: white;
+            text-align: center;
+        }
+
+        .media-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -1px;
+        }
+
+        .media-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Video Grid */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            height: 0;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-caption {
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: #ecfdf5;
+            color: #059669;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        .video-title {
+            font-size: 1.4rem;
+            color: #0f172a;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .video-desc {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        /* Submit Section */
+        .submit-section {
+            margin: 8rem 0;
+            text-align: center;
+            background: #f8fafc;
+            padding: 5rem 2rem;
+            border-radius: 30px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .submit-section h2 {
+            font-size: 2.5rem;
+            font-family: 'Playfair Display', serif;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+        }
+
+        .submit-section p {
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: #64748b;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <header></header>
+
+    <div class="media-hero">
+        <div class="container">
+            <h1>The Media Hub</h1>
+            <p>Expert perspectives, case studies, and technical briefings on workforce optimization and resilience in
+                the African context.</p>
+        </div>
+    </div>
+
+    <main class="container content">
+        <section class="video-grid">
+
+            <!-- Video 1 -->
+            <article class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/RodMLCfgFfw?rel=0&modestbranding=1"
+                        title="Building Professional Resilience" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-caption">
+                    <span class="category-tag">Resilience IQ</span>
+                    <h3 class="video-title">Building Professional Resilience</h3>
+                    <p class="video-desc">A technical briefing on the psychological foundations of high-performance
+                        resilience in demanding corporate environments.</p>
+                </div>
+            </article>
+
+            <!-- Video 2 -->
+            <article class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/G0XUimJbz44?rel=0&modestbranding=1"
+                        title="Navigating Structural Change" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-caption">
+                    <span class="category-tag">Strategic Change</span>
+                    <h3 class="video-title">Navigating Structural Change</h3>
+                    <p class="video-desc">How to maintain workforce stability and mental integrity during organizational
+                        transitions and economic shifts.</p>
+                </div>
+            </article>
+
+            <!-- Video 3 -->
+            <article class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Twtz8OafnBE?rel=0&modestbranding=1"
+                        title="Mitigating Toxic Management" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-caption">
+                    <span class="category-tag">Leadership Audit</span>
+                    <h3 class="video-title">Mitigating Toxic Management</h3>
+                    <p class="video-desc">Identifying and neutralizing destructive leadership patterns that erode
+                        organizational human capital and performance.</p>
+                </div>
+            </article>
+
+            <!-- Video 4 -->
+            <article class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/VLw_V69s-Lg?rel=0&modestbranding=1"
+                        title="The Architecture of the Future" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-caption">
+                    <span class="category-tag">Workplace Evolution</span>
+                    <h3 class="video-title">The Architecture of the Future</h3>
+                    <p class="video-desc">Exploring the role of wellness in the new professional contract for Kenya's
+                        digital and industrial sectors.</p>
+                </div>
+            </article>
+
+            <!-- Video 5 -->
+            <article class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/8-9-oV5wW0E?rel=0&modestbranding=1"
+                        title="Employment Act & Psychological Safety" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-caption">
+                    <span class="category-tag">Legal Briefing</span>
+                    <h3 class="video-title">Employment Act & Safety</h3>
+                    <p class="video-desc">A deep dive into management's statutory duty of care regarding mental health
+                        under Kenyan labor laws.</p>
+                </div>
+            </article>
+
+            <!-- Video 6 -->
+            <article class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/UyxIqN2tPGA?rel=0&modestbranding=1"
+                        title="Corporate Wellness ROI" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="video-caption">
+                    <span class="category-tag">Economic Impact</span>
+                    <h3 class="video-title">Quantifying the Wellness ROI</h3>
+                    <p class="video-desc">Actuarial perspectives on how wellness infrastructure reduces medical spend
+                        and increases organizational valuation.</p>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Submit Section -->
+        <section class="submit-section">
+            <h2>Submit a Strategic Case Study</h2>
+            <p>Your organization's journey can serve as a benchmark for professional excellence in Kenya. We feature
+                verified institutional accounts in our multimedia briefings.</p>
+            <a href="contact.html" class="cta-button cta-primary">Partner with the CEO's Office</a>
+        </section>
+    </main>
+
+    
+
+    <footer></footer>
+    <script src="assets/js/layout.js"></script>
+    
+</body>
+
+</html>

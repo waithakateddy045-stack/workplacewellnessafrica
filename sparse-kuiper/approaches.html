@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | Workplace Wellness Africa</title>
+    <meta name="description"
+        content="How Workplace Wellness Africa connects institutions with mental health and financial literacy resources through education, advocacy, and partnerships.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        /* Approaches Hero */
+        .impact-hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)),
+                url('https://images.unsplash.com/photo-1489440543286-a69330151c0b?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 12rem 0 8rem;
+            color: white;
+            text-align: center;
+        }
+
+        .impact-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -1px;
+        }
+
+        .impact-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Intro */
+        .impact-intro {
+            max-width: 900px;
+            margin: 6rem auto;
+            text-align: center;
+        }
+
+        .impact-intro p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #4b5563;
+        }
+
+        /* Pillar Sections */
+        .pillar-section {
+            padding: 6rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .pillar-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .pillar-badge {
+            display: inline-block;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        .badge-education {
+            background: #eff6ff;
+            color: #1e40af;
+        }
+
+        .badge-advocacy {
+            background: #fdf2f8;
+            color: #db2777;
+        }
+
+        .badge-partnerships {
+            background: #f0fdf4;
+            color: #166534;
+        }
+
+        .pillar-title {
+            font-size: 2.5rem;
+            color: #0f172a;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-desc {
+            color: #64748b;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Cards */
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .approach-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .approach-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        .approach-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .approach-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .approach-card p {
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .read-more-btn {
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            transition: gap 0.2s;
+        }
+
+        .read-more-btn:hover {
+            gap: 0.8rem;
+        }
+
+        /* Targets */
+        .targets-section {
+            background: #022c22;
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .target-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 4rem;
+            max-width: 900px;
+            margin: 4rem auto;
+        }
+
+        .target-stat .number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #10b981;
+            line-height: 1;
+            margin-bottom: 0.8rem;
+        }
+
+        .target-stat .label {
+            color: #a7f3d0;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <header></header>
+
+    <!-- Hero -->
+    <div class="impact-hero">
+        <div class="container">
+            <h1>How We Help</h1>
+            <p>Workplace Wellness Africa connects institutions with the right partners to build sustainable mental health and financial
+                support systems — through education, advocacy, and practitioner networks.</p>
+        </div>
+    </div>
+
+    <!-- Intro -->
+    <div class="container impact-intro">
+        <p>
+            We are a coordinating body that brings together corporations, banks, insurance companies, schools,
+            hospitals, county governments, and community organisations.
+            We don't deliver services alone — we connect the right people, raise awareness among leaders, and advocate
+            for systemic change.
+        </p>
+    </div>
+
+    <!-- PILLAR 1: EDUCATION -->
+    <section class="pillar-section">
+        <div class="container">
+            <div class="pillar-header">
+                <span class="pillar-badge badge-education">Pillar 1: Knowledge</span>
+                <h2 class="pillar-title">Education & Data</h2>
+                <p class="pillar-desc">
+                    We partner with institutions to deliver evidence-based training on mental health literacy,
+                    psychological safety, burnout prevention, and financial literacy.
+                </p>
+            </div>
+            <div class="approach-grid">
+                <!-- Card 1 -->
+                <div class="approach-card">
+                    <div class="approach-icon" style="background: #eff6ff; color: #1e40af;">🎓</div>
+                    <h3>Training & Awareness</h3>
+                    <p>We connect organisations with qualified trainers to deliver workshops tailored to the Kenyan
+                        workplace context, from psychosocial hazards to financial planning.</p>
+                    <a href="approaches/business-training.html" class="read-more-btn" style="color: #1e40af;">Learn More
+                        <span>→</span></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="approach-card">
+                    <div class="approach-icon" style="background: #eff6ff; color: #1e40af;">🏙️</div>
+                    <h3>Community Outreach</h3>
+                    <p>Free community education sessions in underserved areas, bringing mental health awareness,
+                        screenings, and referrals to those who need them most.</p>
+                    <a href="approaches/community-wellness.html" class="read-more-btn" style="color: #1e40af;">Learn
+                        More <span>→</span></a>
+                </div>
+                <!-- Card 3 -->
+                <div class="approach-card">
+                    <div class="approach-icon" style="background: #eff6ff; color: #1e40af;">📚</div>
+                    <h3>Learning Resources</h3>
+                    <p>Free educational articles and guides covering workplace wellbeing, burnout prevention, and HR
+                        strategy — practical knowledge anyone can use.</p>
+                    <a href="resources.html" class="read-more-btn" style="color: #1e40af;">Browse Resources
+                        <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILLAR 2: ADVOCACY -->
+    <section class="pillar-section" style="background: #fffafa;">
+        <div class="container">
+            <div class="pillar-header">
+                <span class="pillar-badge badge-advocacy">Pillar 2: Structural Change</span>
+                <h2 class="pillar-title">Policy & Advocacy</h2>
+                <p class="pillar-desc">
+                    We are building coalitions to lobby for stronger mental health protections in Kenyan workplaces and
+                    help leaders define safer standards.
+                </p>
+            </div>
+            <div class="approach-grid">
+                <!-- Card 1 -->
+                <div class="approach-card">
+                    <div class="approach-icon" style="background: #fdf2f8; color: #db2777;">⚖️</div>
+                    <h3>Policy Awareness</h3>
+                    <p>Helping leaders understand the existing legal landscape around mental health and identifying
+                        where their organisations can accommodate employee wellbeing.</p>
+                    <a href="approaches/workplace-policy.html" class="read-more-btn" style="color: #db2777;">Learn More
+                        <span>→</span></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="approach-card">
+                    <div class="approach-icon" style="background: #fdf2f8; color: #db2777;">📢</div>
+                    <h3>Awareness Campaigns</h3>
+                    <p>Grassroots campaigns that educate workers about their rights and the reality of mental health —
+                        reaching factory floors, market stalls, and offices.</p>
+                    <a href="approaches/stigma-response.html" class="read-more-btn" style="color: #db2777;">Learn More
+                        <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILLAR 3: PARTNERSHIPS -->
+    <section class="pillar-section">
+        <div class="container">
+            <div class="pillar-header">
+                <span class="pillar-badge badge-partnerships">Pillar 3: Access</span>
+                <h2 class="pillar-title">Connecting People With Care</h2>
+                <p class="pillar-desc">
+                    We are developing a vetted network of clinical psychologists and psychiatrists, creating a pipeline
+                    for referrals when professional help is needed.
+                </p>
+            </div>
+            <div class="approach-grid">
+                <!-- Card 1 -->
+                <div class="approach-card">
+                    <div class="approach-icon" style="background: #f0fdf4; color: #166534;">🏥</div>
+                    <h3>Practitioner Network</h3>
+                    <p>A vetted network of mental health practitioners and financial advisors that organisations can be
+                        referred to — improving access to care.</p>
+                    <a href="approaches/practitioner-access.html" class="read-more-btn" style="color: #166534;">Learn
+                        More <span>→</span></a>
+                </div>
+                <!-- Card 2 -->
+                <div class="approach-card">
+                    <div class="approach-icon" style="background: #f0fdf4; color: #166534;">🏗️</div>
+                    <h3>Institutional Alliances</h3>
+                    <p>Connecting corporations, universities, government bodies, and NGOs so that national mental health
+                        goals translate into real collaborative action.</p>
+                    <a href="partners.html" class="read-more-btn" style="color: #166534;">Our Partners
+                        <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 24-Month Targets -->
+    <section class="targets-section">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; font-family: 'Playfair Display', serif; margin-bottom: 2rem;">Our 24-Month
+                Targets</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.15rem; opacity: 0.85; line-height: 1.8;">
+                We are working towards these goals, funded entirely by donations to provide free services to
+                under-resourced institutions.
+            </p>
+
+            <div class="target-stats">
+                <div class="target-stat">
+                    <div class="number">45+</div>
+                    <div class="label">Community Wellness Camps</div>
+                </div>
+                <div class="target-stat">
+                    <div class="number">3,000+</div>
+                    <div class="label">Individuals Screened</div>
+                </div>
+                <div class="target-stat">
+                    <div class="number">450</div>
+                    <div class="label">Clinical Referrals</div>
+                </div>
+            </div>
+
+            <a href="contact.html"
+                style="color: #10b981; font-weight: 600; font-size: 1.1rem; text-decoration: underline;">Partner with us
+                to achieve this →</a>
+        </div>
+    </section>
+
+    
+
+    <footer></footer>
+    <script src="assets/js/layout.js"></script>
+    
+</body>
+
+</html>

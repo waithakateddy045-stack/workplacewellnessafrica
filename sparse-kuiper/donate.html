@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribute to Our Mission | Workplace Wellness Africa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        /* Donate Hero */
+        .donate-hero {
+            position: relative;
+            background: linear-gradient(rgba(4, 120, 87, 0.9), rgba(6, 95, 70, 0.9)),
+                url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 10rem 0 6rem;
+            color: white;
+            text-align: center;
+        }
+
+        .donate-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .donate-hero p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Impact Breakdown */
+        .impact-breakdown {
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .impact-card {
+            background: #fcfcfc;
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            border: 1px solid #f1f5f9;
+        }
+
+        .i-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            background: #ecfdf5;
+            padding: 1rem;
+            border-radius: 50%;
+            color: #047857;
+        }
+
+        /* Donation Form Section */
+        .donation-section {
+            background: #f8fafc;
+            padding: 6rem 0;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .donor-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 4rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-input:focus {
+            border-color: #10b981;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+
+        .amount-options {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .amount-radio {
+            display: none;
+        }
+
+        .amount-label {
+            display: block;
+            padding: 1rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: #64748b;
+            transition: all 0.2s;
+        }
+
+        .amount-radio:checked+.amount-label {
+            background: #ecfdf5;
+            border-color: #10b981;
+            color: #047857;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header injected by JS -->
+    <header></header>
+
+    <!-- Hero -->
+    <div class="donate-hero">
+        <div class="container">
+            <h1>Power the Change</h1>
+            <p>Workplace Wellness Africa is a volunteer-led non-profit. Your contribution directly funds community
+                wellness camps,
+                advocacy campaigns, and essential resources for under-resourced workplaces.</p>
+        </div>
+    </div>
+
+    <!-- How We Use Funds -->
+    <section class="impact-breakdown">
+        <div class="container">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #0f172a;">Where Your Money Goes
+            </h2>
+            <p style="color: #64748b; margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                We operate with full transparency. 100% of individual donations go directly to program delivery.
+            </p>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <span class="i-icon">🏕️</span>
+                    <h3>Wellness Camps</h3>
+                    <p style="color: #64748b; line-height: 1.6;">funding logistics, materials, and basic screening kits
+                        for our community outreach in informal settlements.</p>
+                </div>
+                <div class="impact-card">
+                    <span class="i-icon">📢</span>
+                    <h3>Advocacy Campaigns</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Developing educational materials and running awareness
+                        campaigns to fight stigma in the workplace.</p>
+                </div>
+                <div class="impact-card">
+                    <span class="i-icon">💻</span>
+                    <h3>Digital Platforms</h3>
+                    <p style="color: #64748b; line-height: 1.6;">Maintaining our tele-health referral network and free
+                        resource library for schools and small businesses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form -->
+    <section class="donation-section">
+        <div class="container">
+            <div class="donor-form">
+                <h2
+                    style="text-align: center; font-family: 'Playfair Display', serif; margin-bottom: 2rem; color: #047857;">
+                    Make a Contribution</h2>
+
+                <form action="https://formspree.io/f/xqeljarq" method="POST">
+                    <input type="hidden" name="_subject" value="New Donation Pledge - Workplace Wellness Africa">
+
+                    <!-- Amount Selection -->
+                    <div class="form-group">
+                        <label class="form-label">Select Amount (KES)</label>
+                        <div class="amount-options">
+                            <label>
+                                <input type="radio" name="amount" value="1000" class="amount-radio" required>
+                                <span class="amount-label">1,000</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="amount" value="2500" class="amount-radio">
+                                <span class="amount-label">2,500</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="amount" value="5000" class="amount-radio">
+                                <span class="amount-label">5,000</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="amount" value="10000" class="amount-radio">
+                                <span class="amount-label">10,000</span>
+                            </label>
+                        </div>
+                        <input type="number" name="custom_amount" class="form-input"
+                            placeholder="Or enter custom amount..." style="margin-top: 0.5rem;">
+                    </div>
+
+                    <!-- Donor Details -->
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Phone Number (M-Pesa)</label>
+                        <input type="tel" name="phone" class="form-input" placeholder="e.g. 0712 345 678">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Message (Optional)</label>
+                        <textarea name="message" class="form-textarea" rows="3"
+                            placeholder="Why are you supporting us today?"></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button"
+                        style="width: 100%; border: none; cursor: pointer; background: #047857; color: white; padding: 1.2rem; font-size: 1.1rem; border-radius: 12px; font-weight: 700;">Proceed
+                        to Donate</button>
+
+                    <p style="text-align: center; color: #94a3b8; font-size: 0.9rem; margin-top: 1.5rem;">
+                        Secure payment processing via M-Pesa / Card. You will be redirected.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer injected by JS -->
+    <footer></footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/layout.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Training/Workshop | Workplace Wellness Africa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/chatbot.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(rgba(4, 120, 87, 0.9), rgba(5, 150, 105, 0.8)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 0 6rem;
+            color: white;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: -4rem auto 6rem;
+            background: white;
+            padding: 4rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f5f9;
+            position: relative;
+            z-index: 10;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #10b981;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+
+        .section-header {
+            border-bottom: 2px solid #f1f5f9;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            color: #047857;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert-bar">
+        Need Urgent Support? <a href="advocacy-support.html">Report a Workplace Crisis</a> | Kenya Red Cross: 1199 |
+        Befrienders
+        Kenya: +254 722 178 177
+    </div>
+
+    <!-- Navigation injected by layout.js -->
+    <header></header>
+
+    <div class="service-hero">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Workshops & Training</h1>
+            <p style="font-size: 1.25rem; opacity: 0.95; max-width: 800px; margin: 0 auto; line-height: 1.7;">
+                Equip your team with high-impact resilience frameworks and strategic leadership tools.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <form action="https://formspree.io/f/xqeljarq" method="POST">
+                <!-- Strategic Config -->
+                <input type="hidden" name="_subject" value="New Workshop Request - Workplace Wellness Africa">
+                <input type="hidden" name="_cc" value="waithakateddy045@gmail.com">
+
+                <div class="section-header">
+                    <h2>Training Particulars</h2>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Training/Workshop Title or Topic</label>
+                    <input type="text" name="workshop_title" class="form-input"
+                        placeholder="e.g., Empathy as Strategy, Gen Z Integration" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Target Audience</label>
+                    <select name="target_audience" class="form-select" required>
+                        <option value="">Select group...</option>
+                        <option>Executive Leadership / Board</option>
+                        <option>Middle Management / HR</option>
+                        <option>General Staff / Frontline</option>
+                        <option>Emerging Talent (Entry-Level/Gen Z)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Core Training Objectives</label>
+                    <textarea name="objectives" class="form-textarea" style="height: 100px;"
+                        placeholder="What specific outcomes do you want to achieve?"></textarea>
+                </div>
+
+                <div class="section-header" style="margin-top: 3rem;">
+                    <h2>Logistical Framework</h2>
+                </div>
+
+                <div class="two-col" style="gap: 2rem; margin: 0;">
+                    <div class="form-group">
+                        <label class="form-label">Estimated Delivery Date</label>
+                        <input type="date" name="proposed_date" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Delivery Mode</label>
+                        <select name="delivery_mode" class="form-select" required>
+                            <option>In-Person (On-Site/External)</option>
+                            <option>Hybrid (In-Person + Virtual)</option>
+                            <option>Fully Remote (Live Session)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="section-header" style="margin-top: 3rem;">
+                    <h2>Organization Info</h2>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Organization Name</label>
+                    <input type="text" name="organization" class="form-input" required>
+                </div>
+
+                <div class="two-col" style="gap: 2rem; margin: 0;">
+                    <div class="form-group">
+                        <label class="form-label">Primary Contact</label>
+                        <input type="text" name="contact_name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Professional Email</label>
+                        <input type="email" name="email" class="form-input" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="cta-button"
+                    style="width: 100%; border: none; cursor: pointer; margin-top: 2rem;">
+                    Submit Workshop Proposal
+                </button>
+
+                <p style="text-align: center; font-size: 0.85rem; color: #94a3b8; margin-top: 1.5rem;">
+                    Direct routing to the AWW Strategic Training Division.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    
+
+    <footer></footer>
+    <script>
+        window.SITE_ROOT = '../';
+    </script>
+    <script src="../assets/js/layout.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Workplace Wellness Africa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        /* About Hero */
+        .about-hero {
+            position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1489440543286-a69330151c0b?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 12rem 0 8rem;
+            color: white;
+            text-align: center;
+        }
+
+        .about-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -1px;
+        }
+
+        .about-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* Story Section */
+        .story-section {
+            padding: 8rem 0;
+            background: white;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .story-content h2 {
+            font-size: 2.5rem;
+            color: #0f172a;
+            margin-bottom: 2rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .story-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+
+        .story-marker {
+            border-left: 4px solid #ffd600;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #334155;
+            font-size: 1.2rem;
+        }
+
+        .story-image {
+            position: relative;
+        }
+
+        .story-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .story-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(#10b981 10%, transparent 10%);
+            background-size: 20px 20px;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        /* Mission Card */
+        .mission-box {
+            background: #f0fdf4;
+            padding: 4rem;
+            border-radius: 24px;
+            margin-top: 4rem;
+            text-align: center;
+            border: 1px solid #dcfce7;
+        }
+
+        /* Leadership */
+        .leadership-section {
+            padding: 8rem 0;
+            background: #f8fafc;
+        }
+
+        .leader-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 3rem 2rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .leader-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 4px solid #f0fdf4;
+        }
+
+        .leader-name {
+            font-size: 1.5rem;
+            color: #0f172a;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .leader-role {
+            color: #059669;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .leader-bio {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Header injected by JS -->
+    <header></header>
+
+    <div class="about-hero"
+        style="background: linear-gradient(rgba(22, 62, 39, 0.9), rgba(22, 62, 39, 0.75)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; padding: 10rem 0 8rem; color: white;">
+        <div class="container" style="text-align: center;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif;">We Built This
+                Because Nobody Else Would</h1>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto; line-height: 1.6; opacity: 0.9;">Workplace
+                Wellness Africa exists to close the gap between what employees need and what workplaces provide — across
+                the continent.</p>
+        </div>
+    </div>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content">
+                    <h2>What We Are</h2>
+                    <p>
+                        Workplace Wellness Africa is a consulting and advocacy organisation. We train businesses
+                        to create the structural conditions for work-life balance — financial literacy, mental
+                        wellbeing education, policy design — and we use the revenue from that work to fund
+                        something most organisations will not touch.
+                    </p>
+                    <div class="story-marker">
+                        "In too many workplaces, an employee who cannot sleep is given a pill. An employee
+                        who is depressed is told they are under spiritual attack. We exist to change what
+                        happens next."
+                    </div>
+                    <p>
+                        Our advocacy targets three systemic failures: the misattribution of mental illness
+                        to witchcraft or demonic causes, the over-prescription of sleeping medication as a
+                        substitute for proper mental health referral, and workplace leave policies so rigid
+                        that employees cannot access therapy without a physical sick note from a clinical doctor.
+                    </p>
+                </div>
+                <div class="story-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                        alt="Team collaboration">
+                </div>
+            </div>
+
+            <!-- How This Works -->
+            <div class="mission-box">
+                <h3
+                    style="font-size: 2rem; font-family: 'Playfair Display', serif; margin-bottom: 2rem; color: #064e3b;">
+                    How This Works</h3>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: left;">
+                    <div style="background: white; padding: 2rem; border-radius: 12px; border-top: 4px solid #059669;">
+                        <h4 style="color: #059669; margin-bottom: 0.5rem;">Consulting Revenue</h4>
+                        <p style="color: #4b5563; font-size: 0.95rem;">Organisations pay us to deliver training and
+                            audits on financial literacy, mental wellbeing, and workplace policy. This is how
+                            the mission sustains itself.</p>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 12px; border-top: 4px solid #ffd600;">
+                        <h4 style="color: #ca8a04; margin-bottom: 0.5rem;">Advocacy &amp; Reform</h4>
+                        <p style="color: #4b5563; font-size: 0.95rem;">Revenue funds our charitable work:
+                            intervening in cases of mental health misattribution, pushing for evidence-based
+                            treatment protocols, and campaigning for humane leave policies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section">
+        <div class="container">
+            <h2
+                style="text-align: center; margin-bottom: 4rem; font-size: 2.5rem; font-family: 'Playfair Display', serif;">
+                Our Leadership</h2>
+
+            <div class="leadership-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; max-width: 900px; margin: 0 auto;">
+
+                <!-- Teddy Waithaka -->
+                <div class="leader-card">
+                    <img src="assets/images/teddy-ceo.png" alt="Teddy Waithaka" class="leader-img">
+                    <h3 class="leader-name">Teddy Waithaka</h3>
+                    <div class="leader-role">Founder & Lead Advocate</div>
+                    <p class="leader-bio">
+                        Teddy founded Workplace Wellness Africa to redesign the relationship between
+                        employers and the people who work for them. His focus is structural reform —
+                        changing the policies, norms, and systems that treat human wellbeing as optional.
+                    </p>
+                </div>
+
+                <!-- Gertrude Wangari -->
+                <div class="leader-card">
+                    <img src="assets/images/gertrude-president.png" alt="Gertrude Wangari" class="leader-img">
+                    <h3 class="leader-name">Gertrude Wangari</h3>
+                    <div class="leader-role">President & Coordinator</div>
+                    <p class="leader-bio">
+                        Gertrude coordinates our consulting partnerships and community programmes.
+                        She manages the network of practitioners and organisations that deliver
+                        our training on the ground.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section style="padding: 6rem 0; background: #022c22; color: white;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem; font-family: 'Playfair Display', serif;">Our Growing
+                Coalition</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center;">
+                <div>
+                    <div style="font-size: 3rem; font-weight: 700; color: #10b981;">National</div>
+                    <div style="color: #a7f3d0; margin-top: 0.5rem;">Advocacy Reach</div>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; font-weight: 700; color: #10b981;">Shared</div>
+                    <div style="color: #a7f3d0; margin-top: 0.5rem;">Resources & Curricula</div>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; font-weight: 700; color: #10b981;">100%</div>
+                    <div style="color: #a7f3d0; margin-top: 0.5rem;">Volunteer Led</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer injected by JS -->
+    <footer></footer>
+
+    <script src="assets/js/layout.js"></script>
+
+</body>
+
+</html>

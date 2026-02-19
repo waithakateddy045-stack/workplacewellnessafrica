@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | Workplace Wellness Africa</title>
+    <meta name="description"
+        content="Meet the people behind Workplace Wellness Africa — psychologists, HR professionals, and researchers committed to transforming workplaces across Kenya.">
+    <meta property="og:title" content="Our Team | Workplace Wellness Africa">
+    <meta property="og:description"
+        content="The people building the infrastructure for workplace mental health in Africa.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://workplacewellnessafrica.org/team.html">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        .team-hero {
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #042c22 0%, #064e3b 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .team-hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .team-hero p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .team-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s;
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(5, 150, 105, 0.1);
+            border-color: #10b981;
+        }
+
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 2rem auto 1rem;
+            background: linear-gradient(135deg, #059669, #10b981);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.2);
+        }
+
+        .team-card-body {
+            padding: 0 2rem 2rem;
+        }
+
+        .team-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #064e3b;
+            margin-bottom: 0.3rem;
+        }
+
+        .team-role {
+            color: #059669;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: #475569;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .team-social a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .team-social a:hover {
+            background: #059669;
+            transform: scale(1.1);
+        }
+
+        .values-section {
+            background: #f8fafc;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .value-icon {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .value-title {
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-desc {
+            color: #64748b;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .join-section {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #064e3b, #042c22);
+            border-radius: 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+
+    <section class="team-hero">
+        <div>
+            <h1>The Team Behind the Mission</h1>
+            <p>We're a multidisciplinary team of psychologists, HR professionals, facilitators, and researchers who
+                believe African workplaces can be better.</p>
+        </div>
+    </section>
+
+    <div class="team-container">
+
+        <!-- Team Grid -->
+        <div class="team-grid">
+            <!-- Founder -->
+            <div class="team-card">
+                <div class="team-photo">👤</div>
+                <div class="team-card-body">
+                    <div class="team-name">Daniel Waithaka</div>
+                    <div class="team-role">Founder & Lead Consultant</div>
+                    <p class="team-bio">A workplace wellness strategist with deep expertise in organisational
+                        psychology, employee engagement, and mental health policy. Daniel founded Workplace Wellness
+                        Africa to address the gap between how African workplaces operate and how humans actually
+                        function.</p>
+                    <div class="team-social">
+                        <a href="https://wa.me/254745710078" title="WhatsApp">💬</a>
+                        <a href="mailto:workplacewellnessafrica@gmail.com" title="Email">✉️</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Lead -->
+            <div class="team-card">
+                <div class="team-photo">👤</div>
+                <div class="team-card-body">
+                    <div class="team-name">Research & Content Team</div>
+                    <div class="team-role">Knowledge Development</div>
+                    <p class="team-bio">Our research team translates academic evidence into practical, culturally
+                        relevant resources for Kenyan workplaces. They produce our 49-article knowledge hub — covering
+                        everything from the neuroscience of burnout to the economics of employee wellness.</p>
+                    <div class="team-social">
+                        <a href="resources.html" title="Our Articles">📖</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facilitators -->
+            <div class="team-card">
+                <div class="team-photo">👤</div>
+                <div class="team-card-body">
+                    <div class="team-name">Training & Facilitation</div>
+                    <div class="team-role">Workshop Delivery</div>
+                    <p class="team-bio">Our facilitators don't just lecture — they facilitate real conversations. With
+                        backgrounds in clinical psychology, HR management, and adult learning, they create safe spaces
+                        where honest dialogue about workplace challenges can happen.</p>
+                    <div class="team-social">
+                        <a href="pricing.html" title="Our Programmes">🎯</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Values -->
+        <div class="values-section">
+            <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2rem; color: #064e3b;">
+                What Drives Us</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🔬</div>
+                    <div class="value-title">Evidence Over Trend</div>
+                    <div class="value-desc">We don't chase wellness fads. Every recommendation we make is grounded in
+                        research — neuroscience, organisational psychology, and real data from African workplaces.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <div class="value-title">African Context First</div>
+                    <div class="value-desc">Western wellness models often don't translate. We build frameworks that work
+                        within the economic realities, cultural norms, and systemic pressures specific to this
+                        continent.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🔒</div>
+                    <div class="value-title">Radical Confidentiality</div>
+                    <div class="value-desc">Trust is the currency of this work. Employee data is always anonymised.
+                        Individual responses are never shared with employers. Period.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🏗️</div>
+                    <div class="value-title">Systems, Not Band-Aids</div>
+                    <div class="value-desc">We don't treat burnout with pizza parties. We help organisations redesign
+                        the systems — policies, workloads, leadership practices — that create the problem in the first
+                        place.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advisory Board -->
+        <div style="margin-bottom: 4rem;">
+            <h2
+                style="font-family: 'Playfair Display', serif; font-size: 2rem; color: #064e3b; text-align: center; margin-bottom: 0.5rem;">
+                Our Advisory Network</h2>
+            <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">We collaborate with experts across
+                disciplines to ensure our work meets the highest standards.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                <div style="text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 12px;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🧠</div>
+                    <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">Clinical Psychology</div>
+                    <div style="color: #64748b; font-size: 0.8rem;">Evidence-based mental health frameworks</div>
+                </div>
+                <div style="text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 12px;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">⚖️</div>
+                    <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">Labour Law & Policy</div>
+                    <div style="color: #64748b; font-size: 0.8rem;">Kenya Employment Act compliance</div>
+                </div>
+                <div style="text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 12px;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📈</div>
+                    <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">Organisational Development</div>
+                    <div style="color: #64748b; font-size: 0.8rem;">Change management and culture design</div>
+                </div>
+                <div style="text-align: center; padding: 1.5rem; background: #f8fafc; border-radius: 12px;">
+                    <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">💰</div>
+                    <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">Financial Wellness</div>
+                    <div style="color: #64748b; font-size: 0.8rem;">Employee financial literacy and planning</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join CTA -->
+        <div class="join-section">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Work With Us</h2>
+            <p style="opacity: 0.85; max-width: 500px; margin: 0 auto 1.5rem; line-height: 1.7;">We're always looking
+                for passionate facilitators, researchers, and wellness professionals who share our vision.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html"
+                    style="padding: 0.8rem 2rem; background: #10b981; color: white; border-radius: 8px; text-decoration: none; font-weight: 700;">Get
+                    in Touch</a>
+                <a href="about.html"
+                    style="padding: 0.8rem 2rem; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.3); border-radius: 8px; text-decoration: none; font-weight: 600;">Learn
+                    Our Story</a>
+            </div>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="assets/js/layout.js"></script>
+</body>
+
+</html>

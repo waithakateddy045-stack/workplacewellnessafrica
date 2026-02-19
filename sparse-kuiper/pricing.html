@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Pricing | Workplace Wellness Africa</title>
+    <meta name="description"
+        content="Explore our corporate wellness services — from half-day workshops to full wellness audits and ongoing advisory partnerships. Transparent pricing for organisations of all sizes.">
+    <meta property="og:title" content="Services & Pricing | Workplace Wellness Africa">
+    <meta property="og:description"
+        content="Corporate wellness workshops, audits, and advisory. Transparent pricing for Kenyan organisations.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://workplacewellnessafrica.org/pricing.html">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        .pricing-hero {
+            min-height: 45vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #042c22 0%, #064e3b 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .pricing-hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .pricing-hero p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .pricing-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+            border: 2px solid #e2e8f0;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            border-color: #10b981;
+        }
+
+        .pricing-card.featured {
+            border-color: #059669;
+        }
+
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: #059669;
+            color: white;
+            padding: 0.3rem 2.5rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transform: rotate(45deg);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #064e3b;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #059669;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-price span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #64748b;
+        }
+
+        .card-desc {
+            color: #475569;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem;
+        }
+
+        .card-features li {
+            padding: 0.5rem 0;
+            color: #334155;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-features li::before {
+            content: '✓';
+            color: #059669;
+            font-weight: 700;
+        }
+
+        .card-cta {
+            display: block;
+            text-align: center;
+            padding: 0.9rem;
+            background: #059669;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .card-cta:hover {
+            background: #047857;
+            transform: translateY(-2px);
+        }
+
+        .card-cta.secondary {
+            background: #f1f5f9;
+            color: #334155;
+        }
+
+        .card-cta.secondary:hover {
+            background: #e2e8f0;
+        }
+
+        .process-section {
+            background: #f8fafc;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .step-num {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #059669;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        .step-title {
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-desc {
+            color: #64748b;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .guarantee-section {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #064e3b, #042c22);
+            border-radius: 20px;
+            color: white;
+            margin-bottom: 4rem;
+        }
+
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+
+        .compare-table th {
+            background: #064e3b;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .compare-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+
+        .compare-table tr:hover {
+            background: #f0fdf4;
+        }
+
+        .compare-table .check {
+            color: #059669;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .compare-table .dash {
+            color: #cbd5e1;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+
+    <section class="pricing-hero">
+        <div>
+            <h1>Services & Investment</h1>
+            <p>We design every engagement around your organisation's specific needs. No cookie-cutter packages — just
+                honest pricing and measurable outcomes.</p>
+        </div>
+    </section>
+
+    <div class="pricing-container">
+
+        <!-- Pricing Cards -->
+        <div class="pricing-grid">
+            <!-- Workshop -->
+            <div class="pricing-card">
+                <div class="card-icon">🎯</div>
+                <div class="card-title">Wellness Workshop</div>
+                <div class="card-price">From KES 50,000 <span>/ session</span></div>
+                <p class="card-desc">A focused, high-impact session for your team. Half-day or full-day. Choose your
+                    topic — burnout, boundaries, financial wellness, or leadership.</p>
+                <ul class="card-features">
+                    <li>Half-day (3hrs) or full-day (6hrs)</li>
+                    <li>Up to 50 participants</li>
+                    <li>Customised to your industry</li>
+                    <li>In-person or virtual delivery</li>
+                    <li>Follow-up resource pack</li>
+                    <li>Post-session feedback summary</li>
+                </ul>
+                <a href="contact.html" class="card-cta secondary">Book a Workshop</a>
+            </div>
+
+            <!-- Audit — Featured -->
+            <div class="pricing-card featured">
+                <div class="card-icon">📊</div>
+                <div class="card-title">Corporate Wellness Audit</div>
+                <div class="card-price">From KES 150,000 <span>/ engagement</span></div>
+                <p class="card-desc">A comprehensive assessment of your organisation's wellness infrastructure. We
+                    identify the gaps, quantify the risks, and give you a clear action plan.</p>
+                <ul class="card-features">
+                    <li>Anonymous employee surveys</li>
+                    <li>Leadership interviews</li>
+                    <li>Policy and benefits review</li>
+                    <li>Burnout risk scoring</li>
+                    <li>Custom report with recommendations</li>
+                    <li>30-minute results debrief</li>
+                    <li>2–4 week turnaround</li>
+                </ul>
+                <a href="contact.html" class="card-cta">Get an Audit Quote</a>
+            </div>
+
+            <!-- Advisory -->
+            <div class="pricing-card">
+                <div class="card-icon">🤝</div>
+                <div class="card-title">Ongoing Advisory</div>
+                <div class="card-price">Custom <span>/ monthly retainer</span></div>
+                <p class="card-desc">A long-term partnership. We embed wellness into your organisation's DNA — monthly
+                    check-ins, training, policy guidance, and continuous improvement.</p>
+                <ul class="card-features">
+                    <li>Monthly or quarterly cadence</li>
+                    <li>Dedicated wellness advisor</li>
+                    <li>Staff training sessions included</li>
+                    <li>Policy development support</li>
+                    <li>Quarterly progress reports</li>
+                    <li>Priority WhatsApp support</li>
+                    <li>6 or 12-month engagements</li>
+                </ul>
+                <a href="contact.html" class="card-cta secondary">Discuss a Partnership</a>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="process-section">
+            <h2 style="text-align: center; font-family: 'Playfair Display', serif; font-size: 2rem; color: #064e3b;">How
+                It Works</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-num">1</div>
+                    <div class="step-title">Discovery Call</div>
+                    <div class="step-desc">Free 30-minute conversation to understand your needs, team size, and goals.
+                        No obligation.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">2</div>
+                    <div class="step-title">Custom Proposal</div>
+                    <div class="step-desc">We design a tailored programme with clear scope, timeline, and pricing —
+                        within 48 hours.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">3</div>
+                    <div class="step-title">Delivery</div>
+                    <div class="step-desc">We deliver the engagement — in-person or virtually. Your team walks away with
+                        actionable tools.</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">4</div>
+                    <div class="step-title">Impact Report</div>
+                    <div class="step-desc">You receive a detailed report with findings, recommendations, and measurable
+                        outcomes.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div style="margin-bottom: 4rem;">
+            <h2
+                style="font-family: 'Playfair Display', serif; font-size: 2rem; color: #064e3b; text-align: center; margin-bottom: 0.5rem;">
+                Compare Our Services</h2>
+            <p style="text-align: center; color: #64748b; margin-bottom: 2rem;">Choose the level of support that fits
+                your organisation.</p>
+            <div style="overflow-x: auto;">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Workshop</th>
+                            <th>Audit</th>
+                            <th>Advisory</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Custom content for your team</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Anonymous employee surveys</td>
+                            <td class="dash">—</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Leadership interviews</td>
+                            <td class="dash">—</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Written report with recommendations</td>
+                            <td class="dash">—</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Policy development support</td>
+                            <td class="dash">—</td>
+                            <td class="dash">—</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Ongoing training sessions</td>
+                            <td class="dash">—</td>
+                            <td class="dash">—</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Quarterly progress tracking</td>
+                            <td class="dash">—</td>
+                            <td class="dash">—</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Priority WhatsApp support</td>
+                            <td class="dash">—</td>
+                            <td class="dash">—</td>
+                            <td class="check">✓</td>
+                        </tr>
+                        <tr>
+                            <td>Virtual delivery option</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                            <td class="check">✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Guarantee -->
+        <div class="guarantee-section">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛡️</div>
+            <h2 style="font-size: 2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Our Promise</h2>
+            <p style="opacity: 0.85; max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.7;">Every engagement
+                includes a free discovery call. If after our first session you feel the work didn't deliver value, we'll
+                work with you to fix it — at no additional cost. We're not here to sell programmes. We're here to create
+                change.</p>
+            <a href="contact.html"
+                style="display: inline-block; padding: 0.8rem 2rem; background: #10b981; color: white; border-radius: 8px; text-decoration: none; font-weight: 700;">Book
+                Your Free Discovery Call</a>
+        </div>
+
+        <!-- FAQ Mini -->
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <h3
+                style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: #064e3b; margin-bottom: 0.5rem;">
+                Have Questions?</h3>
+            <p style="color: #64748b;">Check our <a href="faq.html" style="color: #059669; font-weight: 600;">FAQ
+                    page</a> or <a href="https://wa.me/254745710078" style="color: #25D366; font-weight: 600;">WhatsApp
+                    us</a> directly.</p>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script src="assets/js/layout.js"></script>
+</body>
+
+</html>

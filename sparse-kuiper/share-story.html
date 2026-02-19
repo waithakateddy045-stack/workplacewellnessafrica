@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Incident & Share Story | Workplace Wellness Africa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        .report-hero {
+            background: linear-gradient(rgba(4, 120, 87, 0.95), rgba(5, 150, 105, 0.9)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 0 6rem;
+            color: white;
+            text-align: center;
+        }
+
+        .report-container {
+            max-width: 850px;
+            margin: -4rem auto 6rem;
+            background: white;
+            padding: 4rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 10;
+        }
+
+        .disclaimer-box {
+            background: #fffafa;
+            border: 1px solid #fee2e2;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .form-section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #047857;
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #f0fdf4;
+        }
+
+        .input-group {
+            margin-bottom: 2rem;
+        }
+
+        .input-label {
+            display: block;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .form-select,
+        .form-textarea,
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            background: #f8fafc;
+            transition: all 0.2s ease;
+        }
+
+        .form-select:focus,
+        .form-textarea:focus,
+        .form-input:focus {
+            outline: none;
+            border-color: #10b981;
+            background: white;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+
+        .success-state {
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert-bar">
+        Need Urgent Support? <a href="contact.html">Report a Workplace Crisis</a> | Kenya Red Cross:
+        1199 | Befrienders
+        Kenya: +254 722 178 177
+    </div>
+
+    <!-- Navigation injected by layout.js -->
+    <header></header>
+
+    <div class="report-hero">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Workplace Incident Portal</h1>
+            <p style="font-size: 1.25rem; opacity: 0.9; max-width: 750px; margin: 0 auto; line-height: 1.7;">
+                Your data drives our advocacy. Report systemic hazards, policy breaches, or individual grievances to
+                help us map the state of Kenyan workplaces.
+            </p>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="report-container" id="form-wrapper">
+            <div class="disclaimer-box">
+                <h4 style="color: #ef4444; margin-top: 0; display: flex; align-items: center; gap: 0.5rem;">
+                    <span>⚠️</span> Strategic Disclosure & Liability Notice
+                </h4>
+                <div style="font-size: 0.9rem; color: #4b5563; line-height: 1.8;">
+                    <p><strong>1. Advocacy Only:</strong> Submission of this report does not constitute legal
+                        representation or an attorney-client relationship. Workplace Wellness Africa is a research and advocacy body.
+                    </p>
+                    <p><strong>2. Anonymity & Data Protection:</strong> Stories may be used to drive policy reform.
+                        Personally Identifiable Information (PII) is encrypted and never shared without explicit
+                        forensic consent.</p>
+                    <p><strong>3. Crisis Protocol:</strong> If you are in immediate physical danger, contact the Kenya
+                        Red Cross (1199) or the DCI hotline immediately.</p>
+                </div>
+            </div>
+
+            <form id="grievanceForm" action="https://formspree.io/f/meezdqdj" method="POST">
+                <input type="hidden" name="_cc" value="waithakateddy045@gmail.com">
+                <h3 class="form-section-title">1. Professional Context</h3>
+                <div class="input-group">
+                    <label class="input-label">Operational Role</label>
+                    <select id="role" name="role" class="form-select" required>
+                        <option value="">Select current designation...</option>
+                        <option value="Employee">Permanent / Contract Staff</option>
+                        <option value="Manager">Management / Executive</option>
+                        <option value="Intern">Intern / Trainee</option>
+                        <option value="Gig Worker">Gig Worker / Consultant</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Industry Sector</label>
+                    <input type="text" id="dept" name="industry" placeholder="e.g. Financial Services, ICT, Hospitality"
+                        class="form-input" required>
+                </div>
+
+                <h3 class="form-section-title">2. Incident Characterization</h3>
+                <div class="input-group">
+                    <label class="input-label">Primary Hazard Category</label>
+                    <select id="issue" name="category" class="form-select" required>
+                        <option value="">Select category...</option>
+                        <option value="Unpaid Wages">Fiscal Breach (Unpaid Wages/Benefits)</option>
+                        <option value="Harassment">Sexual or Verbal Harassment</option>
+                        <option value="Bullying">Psychosocial Bullying & Intimidation</option>
+                        <option value="Unsafe Conditions">Physical/Health Safety Risks</option>
+                        <option value="Unfair Dismissal">Unlawful Termination</option>
+                        <option value="Burnout">Systemic Overwork & Cognitive Fatigue</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label class="input-label">Forensic Details</label>
+                    <textarea id="story" name="incident_details" rows="6" class="form-textarea"
+                        placeholder="Provide a factual chronology. Include dates, specific actions, and any internal attempts at resolution."
+                        required></textarea>
+                </div>
+
+                <div style="margin: 2rem 0; padding: 1.5rem; background: #f8fafc; border-radius: 12px;">
+                    <label
+                        style="display: flex; gap: 1rem; align-items: flex-start; cursor: pointer; color: #475569; font-size: 0.9rem;">
+                        <input type="checkbox" name="disclaimer_accepted" value="yes" required
+                            style="margin-top: 0.25rem;">
+                        <span>I confirm that the details provided are accurate to the best of my knowledge and I
+                            authorize Workplace Wellness Africa to use this anonymized data for sectoral advocacy.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="cta-button" style="width: 100%; border: none; cursor: pointer;">Submit
+                    Verified Report</button>
+            </form>
+        </div>
+
+        <div id="success-state" style="display: none;" class="success-state">
+            <div style="font-size: 4rem; margin-bottom: 2rem;">🛡️</div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #047857; margin-bottom: 1rem;">
+                Report Logged Securely</h2>
+            <p style="color: #64748b; font-size: 1.1rem; max-width: 600px; margin: 0 auto 3rem;">
+                Your contribution strengthens our collective data pool for workplace reform. Our advocacy team monitors
+                all logs for structural patterns.
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="resources.html" class="cta-button">Browse Resource Portal</a>
+                <a href="contact.html" class="cta-button"
+                    style="background: white; color: #059669; border: 1px solid #059669;">Direct Inquiry</a>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <footer></footer>
+
+    <script>
+        document.getElementById('grievanceForm').addEventListener('submit', function (e) {
+            const formData = {
+                role: document.getElementById('role').value,
+                dept: document.getElementById('dept').value,
+                issue: document.getElementById('issue').value,
+                story: document.getElementById('story').value,
+                timestamp: new Date().toISOString(),
+                refId: 'AWW-' + Math.floor(Math.random() * 10000)
+            };
+
+            // Simulated Backend Log
+            let reports = JSON.parse(localStorage.getItem('aww_stories') || '[]');
+            reports.push(formData);
+            localStorage.setItem('aww_stories', JSON.stringify(reports));
+
+            // UI Transition
+            document.getElementById('form-wrapper').style.display = 'none';
+            document.getElementById('success-state').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script src="assets/js/layout.js"></script>
+    
+</body>
+
+</html>

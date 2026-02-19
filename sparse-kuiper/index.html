@@ -1,0 +1,710 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Wellness Africa | Achieved Work-Life Balance</title>
+    <meta name="description"
+        content="Building the infrastructure for workplace mental health in Kenya. Data-driven advocacy, corporate training, and policy reform.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Workplace Wellness Africa | Work-Life Balance Is Infrastructure">
+    <meta property="og:description"
+        content="We consult with organisations to build healthier workplaces — and use that work to fight the stigma, silence, and outdated policies that keep African workplaces stuck.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://workplacewellnessafrica.org/">
+    <meta property="og:site_name" content="Workplace Wellness Africa">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Workplace Wellness Africa | Achieved Work-Life Balance">
+    <meta name="twitter:description" content="Building the infrastructure for workplace mental health across Africa.">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://workplacewellnessafrica.org/">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        /* Homepage Specific Adjustments */
+        .hero-premium {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(4, 44, 34, 0.85), rgba(6, 78, 59, 0.8)),
+                url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center 30%;
+            color: white;
+            padding-top: 4rem;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            padding: 0 2rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
+            font-size: 1.35rem;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+            color: #ecfdf5;
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .cta-primary {
+            background: #10b981;
+            color: white;
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .cta-primary:hover {
+            background: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+        }
+
+        .cta-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: #064e3b;
+            transform: translateY(-3px);
+        }
+
+        /* Refined Pillars Section */
+        .pillars-wrapper {
+            padding: 8rem 0;
+            background: #f8fafc;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillars-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.3;
+        }
+
+        .pillars-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .pillars-header h2 {
+            font-size: 3rem;
+            color: #0f172a;
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .pillars-header p {
+            font-size: 1.15rem;
+            color: #64748b;
+            line-height: 1.8;
+        }
+
+        .pillar-flex {
+            display: flex;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+        }
+
+        .pillar-box {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pillar-box::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #059669;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .pillar-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .pillar-box:hover::after {
+            transform: scaleX(1);
+        }
+
+        .p-icon-circle {
+            width: 70px;
+            height: 70px;
+            background: #ecfdf5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #059669;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .pillar-box:hover .p-icon-circle {
+            background: #059669;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .pillar-box h3 {
+            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-box p {
+            color: #64748b;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .pillar-link {
+            font-weight: 600;
+            color: #059669;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            transition: gap 0.2s;
+        }
+
+        .pillar-link:hover {
+            gap: 0.8rem;
+        }
+
+        /* Feature Section */
+        .feature-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            background: #f8fafc;
+        }
+
+        .feature-image {
+            height: 100%;
+            min-height: 600px;
+            background: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .feature-text {
+            padding: 6rem;
+        }
+
+        /* Resource Highlights */
+        .resource-highlight {
+            padding: 6rem 0;
+        }
+
+        .resource-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .res-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .res-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .res-img {
+            height: 200px;
+            background: #e2e8f0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .res-body {
+            padding: 2rem;
+        }
+
+        .res-tag {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+        }
+
+        .res-title {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-family: 'Playfair Display', serif;
+            color: #0f172a;
+        }
+
+        .res-desc {
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-item {
+                padding: 4rem 2rem;
+                border-right: none;
+                border-bottom: 1px solid #f1f5f9;
+            }
+
+            .feature-split {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-image {
+                min-height: 300px;
+                order: -1;
+            }
+
+            .feature-text {
+                padding: 3rem 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Header injected by JS -->
+    <header></header>
+
+    <!-- Hero Section -->
+    <section class="hero-premium"
+        style="background: linear-gradient(rgba(22, 62, 39, 0.85), rgba(22, 62, 39, 0.7)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center;">
+        <div class="hero-content">
+            <span
+                style="letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1.5rem; display: block; opacity: 0.7;">Workplace
+                Wellness Africa</span>
+            <h1>Work-Life Balance Is Not a Perk.<br>It Is Infrastructure.</h1>
+            <p>We consult with organisations to build the conditions where people can actually thrive — and we use
+                that work to fund a broader fight against the stigma, silence, and outdated policies that keep
+                African workplaces stuck.</p>
+            <div class="cta-group">
+                <a href="approaches.html" class="cta-button cta-primary">What We Do</a>
+                <a href="about.html" class="cta-button cta-secondary">Why We Exist</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work -->
+    <section class="pillars-wrapper" id="pillars">
+        <div class="pillars-header">
+            <h2>How We Work</h2>
+            <p>Our consulting revenue funds our advocacy. This is not a side project — it is the engine
+                that makes the mission sustainable.</p>
+        </div>
+
+        <div class="pillar-flex">
+            <!-- Pillar 1: Organisational Consulting -->
+            <div class="pillar-box">
+                <div class="p-icon-circle"
+                    style="background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=200&q=80'); background-size: cover; border-radius: 50%;">
+                </div>
+                <h3>Organisational Consulting</h3>
+                <p>We work directly with businesses to design work environments where balance is built into the
+                    structure — not left to individual willpower. This includes financial literacy programmes,
+                    mental wellbeing education for employees, and audits of workplace policies that quietly
+                    erode human capacity.</p>
+                <a href="approaches/business-training.html" class="pillar-link">
+                    Our Consulting Services <span>→</span>
+                </a>
+            </div>
+
+            <!-- Pillar 2: Education & Training -->
+            <div class="pillar-box">
+                <div class="p-icon-circle"
+                    style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=200&q=80'); background-size: cover; border-radius: 50%;">
+                </div>
+                <h3>Education &amp; Training</h3>
+                <p>Most managers have never been trained to recognise burnout, and most employees have never been
+                    taught to manage money. We deliver culturally grounded curricula on mental health literacy,
+                    financial planning, and the early warning signs that organisations tend to ignore until
+                    it is too late.</p>
+                <a href="approaches/business-training.html" class="pillar-link">
+                    Training Programmes <span>→</span>
+                </a>
+            </div>
+
+            <!-- Pillar 3: Advocacy & Reform -->
+            <div class="pillar-box">
+                <div class="p-icon-circle"
+                    style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80'); background-size: cover; border-radius: 50%;">
+                </div>
+                <h3>Advocacy &amp; Reform</h3>
+                <p>Across Africa, mental illness is still routinely misattributed to spiritual causes, and
+                    employees who need therapy cannot access it without a clinical sick note for a "physical"
+                    ailment. We advocate for evidence-based mental health assessment, responsible prescribing
+                    practices, and workplace policies flexible enough to accommodate human beings.</p>
+                <a href="about.html" class="pillar-link">
+                    Our Advocacy Work <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats -->
+    <section style="background: linear-gradient(135deg, #064e3b, #042c22); padding: 5rem 0; color: white;">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                <div>
+                    <div style="font-size: 3rem; font-weight: 800; color: #10b981;" class="counter" data-target="50">0
+                    </div>
+                    <div style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">Organisations Served</div>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; font-weight: 800; color: #10b981;" class="counter" data-target="10000">
+                        0</div>
+                    <div style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">Employees Reached</div>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; font-weight: 800; color: #10b981;" class="counter" data-target="49">0
+                    </div>
+                    <div style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">In-Depth Articles</div>
+                </div>
+                <div>
+                    <div style="font-size: 3rem; font-weight: 800; color: #10b981;" class="counter" data-target="7">0
+                    </div>
+                    <div style="font-size: 0.9rem; opacity: 0.7; margin-top: 0.5rem;">Resource Categories</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section style="background: #f1f5f9; padding: 3rem 0;">
+        <div class="container" style="text-align: center;">
+            <p
+                style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #94a3b8; margin-bottom: 1.5rem; font-weight: 600;">
+                Trusted Across Sectors</p>
+            <div
+                style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2.5rem; align-items: center; opacity: 0.6;">
+                <span
+                    style="font-size: 1.1rem; font-weight: 700; color: #334155; padding: 0.5rem 1.5rem; border: 1px solid #cbd5e1; border-radius: 8px;">🏭
+                    Manufacturing</span>
+                <span
+                    style="font-size: 1.1rem; font-weight: 700; color: #334155; padding: 0.5rem 1.5rem; border: 1px solid #cbd5e1; border-radius: 8px;">🏦
+                    Financial Services</span>
+                <span
+                    style="font-size: 1.1rem; font-weight: 700; color: #334155; padding: 0.5rem 1.5rem; border: 1px solid #cbd5e1; border-radius: 8px;">🌍
+                    NGO & Development</span>
+                <span
+                    style="font-size: 1.1rem; font-weight: 700; color: #334155; padding: 0.5rem 1.5rem; border: 1px solid #cbd5e1; border-radius: 8px;">🎓
+                    Education</span>
+                <span
+                    style="font-size: 1.1rem; font-weight: 700; color: #334155; padding: 0.5rem 1.5rem; border: 1px solid #cbd5e1; border-radius: 8px;">🏥
+                    Healthcare</span>
+                <span
+                    style="font-size: 1.1rem; font-weight: 700; color: #334155; padding: 0.5rem 1.5rem; border: 1px solid #cbd5e1; border-radius: 8px;">💻
+                    Technology</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Self-Assessment CTA -->
+    <section style="background: linear-gradient(135deg, #059669, #047857); padding: 4rem 0; text-align: center;">
+        <div class="container">
+            <h2 style="color: white; font-size: 2.2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">
+                How Close to Burnout Are You?</h2>
+            <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; max-width: 550px; margin: 0 auto 2rem;">Take our
+                free, confidential 2-minute self-assessment. No signup required. Your data never leaves your browser.
+            </p>
+            <a href="self-assessment.html"
+                style="display: inline-block; padding: 1rem 2.5rem; background: white; color: #059669; border-radius: 50px; font-weight: 700; text-decoration: none; font-size: 1.1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transition: transform 0.3s;">
+                Take the Free Assessment →
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section style="background: white; padding: 6rem 0;">
+        <div class="container" style="text-align: center;">
+            <h2
+                style="font-size: 2.5rem; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; color: #0f172a;">
+                What People Say</h2>
+            <p style="color: #64748b; margin-bottom: 3rem;">Real feedback from the organisations and individuals we've
+                worked with.</p>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; text-align: left;">
+                <div style="background: #f8fafc; padding: 2rem; border-radius: 16px; border-left: 4px solid #059669;">
+                    <p style="color: #475569; line-height: 1.7; margin-bottom: 1rem; font-style: italic;">"The wellness
+                        audit opened our eyes. We thought we were doing fine — the data showed us we were losing people.
+                        Within three months of implementing the recommendations, our retention improved noticeably."</p>
+                    <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">— HR Director, Manufacturing
+                        Sector</div>
+                </div>
+                <div style="background: #f8fafc; padding: 2rem; border-radius: 16px; border-left: 4px solid #059669;">
+                    <p style="color: #475569; line-height: 1.7; margin-bottom: 1rem; font-style: italic;">"The articles
+                        on this site feel like they were written by someone who actually works in a Kenyan office. No
+                        corporate fluff — just real talk. I've shared the burnout article with my entire department."
+                    </p>
+                    <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">— Senior Analyst, Financial
+                        Services</div>
+                </div>
+                <div style="background: #f8fafc; padding: 2rem; border-radius: 16px; border-left: 4px solid #059669;">
+                    <p style="color: #475569; line-height: 1.7; margin-bottom: 1rem; font-style: italic;">"We brought
+                        them in for a half-day workshop. Our team is still talking about it weeks later. The facilitator
+                        didn't just lecture — they understood our specific challenges and worked through them with us."
+                    </p>
+                    <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">— Operations Manager, NGO Sector
+                    </div>
+                </div>
+                <div style="background: #f8fafc; padding: 2rem; border-radius: 16px; border-left: 4px solid #059669;">
+                    <p style="color: #475569; line-height: 1.7; margin-bottom: 1rem; font-style: italic;">"I took the
+                        self-assessment quiz and it was a wake-up call. I scored in the 'high risk' zone. The
+                        recommended articles helped me understand what was happening to my body and what to do about
+                        it."</p>
+                    <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">— Project Manager, Tech Company
+                    </div>
+                </div>
+                <div style="background: #f8fafc; padding: 2rem; border-radius: 16px; border-left: 4px solid #059669;">
+                    <p style="color: #475569; line-height: 1.7; margin-bottom: 1rem; font-style: italic;">"The financial
+                        wellness component was unexpected but so needed. Many of our staff were drowning in loan stress
+                        and it was killing productivity. Nobody else talks about this."</p>
+                    <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">— CEO, SME in Nairobi</div>
+                </div>
+                <div style="background: #f8fafc; padding: 2rem; border-radius: 16px; border-left: 4px solid #059669;">
+                    <p style="color: #475569; line-height: 1.7; margin-bottom: 1rem; font-style: italic;">"Finally, a
+                        wellness resource that speaks to the African workplace reality — not imported frameworks that
+                        don't apply here. This is exactly what our industry needs."</p>
+                    <div style="font-weight: 700; color: #1e293b; font-size: 0.9rem;">— L&D Lead, East African Corporate
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Burnout Meter Section -->
+    <section style="background: #f8fafc; padding: 6rem 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Institutional Health Check</h2>
+            <p style="max-width: 600px; margin: 0 auto 3rem; color: #64748b;">
+                Burnout is a systemic issue, not an individual failure. Use our tool to gauge the pressure levels in
+                your personal or professional life.
+            </p>
+            <!-- The JS will inject the new card UI here -->
+            <div id="burnout-meter-container"></div>
+        </div>
+    </section>
+
+    <!-- Resource Highlights -->
+    <section class="resource-highlight" style="background: white;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem;">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Latest Insights</h2>
+                    <p style="color: #64748b;">Deep-dive articles for leaders and employees.</p>
+                </div>
+                <a href="resources.html" class="cta-button"
+                    style="background: #f1f5f9; color: #334155; padding: 0.8rem 1.5rem; font-size: 0.9rem;">View All
+                    Library</a>
+            </div>
+
+            <div class="resource-cards">
+                <!-- Card 1 -->
+                <a href="resources/healthy-business.html" class="res-card">
+                    <div class="res-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80')">
+                    </div>
+                    <div class="res-body">
+                        <span class="res-tag">For Leaders</span>
+                        <h3 class="res-title">The Business Case for Wellness</h3>
+                        <p class="res-desc">Why mental health is a P&L issue. Calculating the cost of presenteeism and
+                            turnover.</p>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="resources/corporate-emotional-valves.html" class="res-card">
+                    <div class="res-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80')">
+                    </div>
+                    <div class="res-body">
+                        <span class="res-tag">Strategy</span>
+                        <h3 class="res-title">Corporate Emotional Valves</h3>
+                        <p class="res-desc">Understanding organizational silence, gossip as data, and the danger of the
+                            "Open Door" fallacy.</p>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="resources/your-wellness.html" class="res-card">
+                    <div class="res-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80')">
+                    </div>
+                    <div class="res-body">
+                        <span class="res-tag">Self-Defense</span>
+                        <h3 class="res-title">Biology of Burnout</h3>
+                        <p class="res-desc">Hardcore internal physiology. Allostatic load, Polyvagal theory, and how to
+                            hack your nervous system.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Split -->
+    <section class="feature-split">
+        <div class="feature-text">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">The Problem Nobody Talks About</h2>
+            <p style="margin-bottom: 1.5rem; color: #4b5563; font-size: 1.1rem; line-height: 1.8;">
+                In many parts of Africa, an employee showing signs of depression or anxiety is more likely to
+                be taken to a traditional healer than referred to a mental health professional. The symptoms
+                are attributed to spiritual attack. The "treatment" is ritual, not clinical assessment.
+            </p>
+            <p style="margin-bottom: 1.5rem; color: #4b5563; font-size: 1.1rem; line-height: 1.8;">
+                Meanwhile, the employees who do see a doctor are often handed sleeping pills for stress-induced
+                insomnia — because the root cause (overwork, rigid leave policies, no access to therapy during
+                working hours) is never addressed. The pill manages the symptom. The system remains untouched.
+            </p>
+            <p style="margin-bottom: 2rem; color: #4b5563; font-size: 1.1rem; line-height: 1.8;">
+                We exist because these are not edge cases. They are the norm. And they will remain the norm
+                until somebody builds the alternative — informed assessment, responsible prescribing, and
+                workplace policies that treat mental health with the same seriousness as physical safety.
+            </p>
+            <a href="resources.html" style="color: #0f172a; font-weight: 700; text-decoration: underline;">Explore Our
+                Resource Library →</a>
+        </div>
+        <div class="feature-image"
+            style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center; border-radius: 24px; min-height: 400px; box-shadow: var(--shadow-bold);">
+        </div>
+    </section>
+
+
+
+    <!-- Footer injected by JS -->
+    <footer></footer>
+
+    <script>window.SITE_ROOT = '';</script>
+    <script src="assets/js/layout.js"></script>
+    <script src="assets/js/burnout-meter.js"></script>
+    <script>
+        // Counter Animation
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.counter');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.dataset.target);
+                        const duration = 2000;
+                        const start = performance.now();
+                        function update(now) {
+                            const elapsed = now - start;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const eased = 1 - Math.pow(1 - progress, 3);
+                            const current = Math.floor(eased * target);
+                            counter.textContent = current >= 1000 ? current.toLocaleString() + '+' : current + '+';
+                            if (progress < 1) requestAnimationFrame(update);
+                        }
+                        requestAnimationFrame(update);
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        document.querySelectorAll('.counter').forEach(c => {
+            counterObserver.observe(c.parentElement.parentElement);
+        });
+    </script>
+
+</body>
+
+</html>

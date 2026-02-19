@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inclusive Workplaces | Workplace Wellness Africa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/chatbot.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <style>
+        .impact-hero {
+            background: linear-gradient(rgba(88, 28, 135, 0.9), rgba(88, 28, 135, 0.8)),
+                url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 0 6rem;
+            color: white;
+            text-align: center;
+        }
+
+        .impact-intro {
+            max-width: 800px;
+            margin: 4rem auto;
+            text-align: center;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        .inclusion-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e5e7eb;
+            border-left: 5px solid #7c3aed;
+        }
+
+        .inclusion-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: #6d28d9;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .inclusion-card p {
+            color: #6b7280;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .inclusion-cta {
+            background: #6d28d9;
+            color: white;
+            padding: 4rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .btn-inclusion {
+            background: white;
+            color: #6d28d9;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert-bar">
+        Need Urgent Support? <a href="../contact.html">Reach Out</a> | Kenya Red Cross: 1199
+    </div>
+
+    <header></header>
+
+    <div class="impact-hero">
+        <div class="container">
+            <span
+                style="background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px; margin-bottom: 1.5rem; display: inline-block;">Advocacy
+                Pillar</span>
+            <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Inclusive Workplaces</h1>
+            <p style="font-size: 1.25rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">
+                Raising awareness about neurodiversity and helping leaders understand how to create
+                environments where all cognitive styles can contribute.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="../approaches.html"
+            style="display: inline-block; margin-top: 2rem; color: #6d28d9; text-decoration: none; font-weight: 600;">←
+            Back to Our Work</a>
+
+        <div class="impact-intro">
+            <p>ADHD, Autism, Dyslexia, and other cognitive variations are far more common than most
+                workplaces realise. In Kenya, there is very little awareness of neurodiversity in
+                professional settings — meaning talented people are excluded or forced to mask who they
+                are just to keep a job.</p>
+            <p>Workplace Wellness Africa raises awareness among leaders about neurodiversity and helps them understand
+                simple, practical ways to make workplaces more accommodating for different cognitive
+                styles.</p>
+        </div>
+
+        <h2 style="margin-bottom: 2rem; color: #6d28d9; font-family: 'Playfair Display', serif;">What We
+            Advocate For</h2>
+
+        <div class="inclusion-card">
+            <h3>Understanding Neurodiversity</h3>
+            <p>Most managers have never heard the term "neurodiversity." We raise awareness about what
+                it means, how common it is, and why it matters — helping leaders move from confusion
+                or bias to understanding and accommodation.</p>
+        </div>
+
+        <div class="inclusion-card">
+            <h3>Flexible Work Structures</h3>
+            <p>Open-plan offices, constant meetings, and rigid schedules can be particularly challenging
+                for neurodivergent employees. We help leaders understand that small environmental changes —
+                quiet spaces, flexible hours, written instructions — can make a significant difference
+                without being costly or disruptive.</p>
+        </div>
+
+        <div class="inclusion-card">
+            <h3>Reducing Noise, Increasing Focus</h3>
+            <p>The "always-on" expectation punishes people who need focused blocks of time. We advocate
+                for simple practices like moving status updates to written memos and reserving meetings
+                for actual decision-making — changes that benefit everyone, not just neurodivergent
+                employees.</p>
+        </div>
+
+        <div class="inclusion-cta">
+            <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 1rem;">Making Space for Every
+                Mind</h2>
+            <p style="opacity: 0.9; max-width: 600px; margin: 0 auto;">
+                Interested in learning more about how your workplace can be more inclusive? We're happy
+                to have a conversation about what practical steps might work for your organisation.
+            </p>
+            <br>
+            <a href="../contact.html" class="btn-inclusion">Get in Touch</a>
+        </div>
+    </div>
+
+    <button class="chatbot-toggler"><span>💬</span></button>
+    <div class="chatbot">
+        <header>
+            <h2>AWW Wellness AI</h2><span class="close-btn">✕</span>
+        </header>
+        <ul class="chatbox"></ul>
+        <div class="chat-input">
+            <textarea id="chat-input" placeholder="Type a message..." spellcheck="false" required></textarea>
+            <span id="send-btn">➤</span>
+        </div>
+    </div>
+
+    <footer></footer>
+    <script>window.SITE_ROOT = '../';</script>
+    <script src="../assets/js/layout.js"></script>
+    
+</body>
+
+</html>

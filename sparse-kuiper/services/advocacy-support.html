@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Advocacy & Support | Workplace Wellness Africa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/chatbot.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <style>
+        .service-hero {
+            background: linear-gradient(rgba(4, 120, 87, 0.9), rgba(5, 150, 105, 0.8)), url('https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 0 6rem;
+            color: white;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 800px;
+            margin: -4rem auto 6rem;
+            background: white;
+            padding: 4rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f5f9;
+            position: relative;
+            z-index: 10;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #10b981;
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+
+        .section-header {
+            border-bottom: 2px solid #f1f5f9;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            color: #047857;
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .privacy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #f0fdf4;
+            color: #059669;
+            padding: 0.5rem 1rem;
+            border-radius: 99px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert-bar">
+        Need Urgent Support? <a href="advocacy-support.html">Report a Workplace Crisis</a> | Kenya Red Cross: 1199 |
+        Befrienders
+        Kenya: +254 722 178 177
+    </div>
+
+    <!-- Navigation injected by layout.js -->
+    <header></header>
+
+    <div class="service-hero">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Advocacy & Legal Support</h1>
+            <p style="font-size: 1.25rem; opacity: 0.95; max-width: 800px; margin: 0 auto; line-height: 1.7;">
+                Strategic guidance for professionals navigating complex workplace challenges, rights violations, or
+                psychological safety crises.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="form-container">
+            <div style="text-align: center;">
+                <div class="privacy-badge">
+                    <span>🔒</span> Verified Confidential Protocol
+                </div>
+            </div>
+
+            <form action="https://formspree.io/f/xqeljarq" method="POST">
+                <!-- Strategic Config -->
+                <input type="hidden" name="_subject" value="New Advocacy Support Request - Workplace Wellness Africa">
+                <input type="hidden" name="_cc" value="waithakateddy045@gmail.com">
+
+                <div class="section-header">
+                    <h2>Case Profile</h2>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Classification of Issue</label>
+                    <select name="issue_type" class="form-select" required>
+                        <option value="">Select category...</option>
+                        <option>Rights Violation / Unfair Termination</option>
+                        <option>Workplace Harassment / Bullying</option>
+                        <option>Chronic Stress / Burnout Crisis</option>
+                        <option>Contractual Friction / Legal Review</option>
+                        <option>Safe Exit Strategy Consultation</option>
+                        <option>Other Professional Crisis</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Forensic Overview</label>
+                    <textarea name="case_brief" class="form-textarea" style="height: 150px;"
+                        placeholder="Briefly outline the situation. Do not feel compelled to share highly sensitive identifiers in this initial brief."
+                        required></textarea>
+                </div>
+
+                <div class="section-header" style="margin-top: 3rem;">
+                    <h2>Professional Position</h2>
+                </div>
+
+                <div class="two-col" style="gap: 2rem; margin: 0;">
+                    <div class="form-group">
+                        <label class="form-label">Current Role / Sector</label>
+                        <input type="text" name="role" class="form-input"
+                            placeholder="e.g., Senior Accountant / Healthcare" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Employment Status</label>
+                        <select name="employment_status" class="form-select" required>
+                            <option>Active (Current Employee)</option>
+                            <option>Notice Period</option>
+                            <option>Recently Terminated / Resigned</option>
+                            <option>Independent Contractor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="section-header" style="margin-top: 3rem;">
+                    <h2>Confidential Contact</h2>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Preferred Name / Alias (Optional)</label>
+                    <input type="text" name="name" class="form-input" placeholder="How should we address you?">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Secure Email Address</label>
+                    <input type="email" name="email" class="form-input" placeholder="Email for secure follow-up"
+                        required>
+                </div>
+
+                <button type="submit" class="cta-button"
+                    style="width: 100%; border: none; cursor: pointer; margin-top: 2rem;">
+                    Request Strategy Consultation
+                </button>
+
+                <p style="text-align: center; font-size: 0.85rem; color: #94a3b8; margin-top: 1.5rem;">
+                    Your request will be reviewed directly by our advocacy lead within 24-48 hours.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    
+
+    <footer></footer>
+    <script>
+        window.SITE_ROOT = '../';
+    </script>
+    <script src="../assets/js/layout.js"></script>
+    
+</body>
+
+</html>

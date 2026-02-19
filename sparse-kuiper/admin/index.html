@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workforce Intelligence Dashboard | Workplace Wellness Africa</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --emerald: #10b981;
+            --forest: #064e3b;
+            --slate: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            margin: 0;
+            padding: 0;
+            color: var(--slate);
+        }
+
+        #login-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--forest), #065f46);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .login-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-box h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--forest);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .dashboard {
+            max-width: 1400px;
+            margin: 2rem auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid #f1f5f9;
+        }
+
+        .dashboard h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--forest);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 0.5rem;
+            margin-top: 2rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 1.25rem 1.5rem;
+            background: #f8fafc;
+            color: #64748b;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 1.5rem;
+            background: white;
+            border-top: 1px solid #f1f5f9;
+            border-bottom: 1px solid #f1f5f9;
+            vertical-align: top;
+        }
+
+        tr td:first-child {
+            border-left: 1px solid #f1f5f9;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+
+        tr td:last-child {
+            border-right: 1px solid #f1f5f9;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .tag-high {
+            background: #fef2f2;
+            color: #ef4444;
+        }
+
+        .tag-medium {
+            background: #fffbeb;
+            color: #f59e0b;
+        }
+
+        .tag-low {
+            background: #f0fdf4;
+            color: #10b981;
+        }
+
+        .btn {
+            background: var(--forest);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #065f46;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.2);
+        }
+
+        .btn-danger {
+            background: #ef4444;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login-screen">
+        <div class="login-box">
+            <h2>Admin Portal</h2>
+            <p style="color: #64748b; margin-bottom: 2rem;">Authorized Personnel Access Only</p>
+            <input type="password" id="password" placeholder="System Password" class="form-input">
+            <button onclick="checkAuth()" class="btn" style="width: 100%;">Authenticate</button>
+        </div>
+    </div>
+
+    <div class="dashboard" id="dashboard" style="display: none;">
+        <h1>
+            <span>Workforce Intelligence</span>
+            <button onclick="exportData()" class="btn">Export Strategic Data (CSV)</button>
+        </h1>
+        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 3rem;">Forensic log of anonymous submissions from
+            the Workplace Incident Portal.</p>
+
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Role / Industry</th>
+                    <th>Hazard Category</th>
+                    <th>Forensic Narrative</th>
+                </tr>
+            </thead>
+            <tbody id="storyTable">
+            </tbody>
+        </table>
+
+        <div
+            style="margin-top: 4rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 2rem;">
+            <p style="color: #94a3b8; font-size: 0.85rem;">System Status: Secure | Data Source: Local Registry</p>
+            <button onclick="clearData()" class="btn btn-danger">Purge Registry</button>
+        </div>
+    </div>
+
+    <script>
+        function checkAuth() {
+            const pass = document.getElementById('password').value;
+            if (pass === 'admin123') {
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                loadData();
+            } else {
+                alert('Authentication Failed');
+            }
+        }
+
+        function loadData() {
+            const reports = JSON.parse(localStorage.getItem('aww_stories') || '[]');
+            const tbody = document.getElementById('storyTable');
+            tbody.innerHTML = '';
+
+            reports.reverse().forEach(report => {
+                const date = report.timestamp ? new Date(report.timestamp).toLocaleString() : 'N/A';
+
+                let tagClass = 'tag-medium';
+                if (report.issue && (report.issue.includes('Harassment') || report.issue.includes('Unsafe'))) {
+                    tagClass = 'tag-high';
+                } else if (report.issue && report.issue.includes('Burnout')) {
+                    tagClass = 'tag-low';
+                }
+
+                const row = `
+                    <tr>
+                        <td style="color: #64748b; font-size: 0.85rem; font-family: monospace;">${date}</td>
+                        <td>
+                            <strong style="display: block; color: var(--forest);">${report.role || 'Unknown'}</strong>
+                            <span style="color: #94a3b8; font-size: 0.85rem;">${report.dept || 'Independent'}</span>
+                        </td>
+                        <td><span class="tag ${tagClass}">${report.issue || report.category || 'Unclassified'}</span></td>
+                        <td style="max-width: 500px; line-height: 1.6; color: #334155; font-size: 0.95rem;">${report.story || report.incident_details || 'No narrative provided.'}</td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        function exportData() {
+            const reports = JSON.parse(localStorage.getItem('aww_stories') || '[]');
+            if (reports.length === 0) { alert('No data available for export.'); return; }
+
+            let csvContent = "data:text/csv;charset=utf-8,Timestamp,Role,Industry,Category,Narrative\n";
+
+            reports.forEach(row => {
+                const cleanStory = (row.story || row.incident_details || "").replace(/,/g, " ").replace(/\n/g, ". ");
+                const entry = [
+                    row.timestamp || "",
+                    row.role || "",
+                    row.dept || "",
+                    row.issue || row.category || "",
+                    cleanStory
+                ].join(",");
+                csvContent += entry + "\n";
+            });
+
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", `AWW_Forensic_Log_${new Date().toISOString().split('T')[0]}.csv`);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function clearData() {
+            if (confirm('CRITICAL: Are you sure you want to purge the registry? All forensic data will be permanently deleted.')) {
+                localStorage.removeItem('aww_stories');
+                loadData();
+            }
+        }
+    </script>
+</body>
+
+</html>

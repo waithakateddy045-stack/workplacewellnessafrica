@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Hub & Strategy Portal | Workplace Wellness Africa</title>
+    <meta name="description"
+        content="49 in-depth articles on workplace wellness, burnout, toxic leadership, family-work balance, and more. Free educational resources for the African workplace.">
+    <meta property="og:title" content="Knowledge Hub | Workplace Wellness Africa">
+    <meta property="og:description"
+        content="49 free, in-depth articles on burnout, toxic management, work-life balance, and building healthier African workplaces.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://workplacewellnessafrica.org/resources.html">
+    <link rel="canonical" href="https://workplacewellnessafrica.org/resources.html">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/chatbot.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        .resource-section {
+            margin-bottom: 8rem;
+        }
+
+        .resource-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #047857;
+            margin-bottom: 3.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .resource-section h2::after {
+            content: '';
+            flex-grow: 1;
+            height: 2px;
+            background: #dcfce7;
+        }
+
+        .portal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .portal-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e2e8f0;
+        }
+
+        .portal-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(5, 150, 105, 0.1);
+            border-color: #10b981;
+        }
+
+        .portal-card-body {
+            padding: 2.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portal-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #047857;
+            margin-bottom: 1rem;
+        }
+
+        .portal-card p {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .topics {
+            margin: 1.5rem 0 2rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .topics li {
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+            color: #2d3748;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .topics li::before {
+            content: '→';
+            color: #10b981;
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+        }
+
+        .resource-hero {
+            background: linear-gradient(rgba(4, 120, 87, 0.9), rgba(5, 150, 105, 0.8)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 10rem 0 8rem;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert-bar">
+        Need Urgent Support? <a href="contact.html">Report a Workplace Crisis</a> | Kenya Red Cross:
+        1199 |
+        Befrienders Kenya: +254 722 178 177
+    </div>
+
+    <!-- Navigation injected by layout.js -->
+    <header></header>
+
+    <div class="resource-hero">
+        <div class="container">
+            <h1 style="font-size: 4rem; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif;">The Knowledge
+                Hub</h1>
+            <p style="font-size: 1.4rem; opacity: 0.95; max-width: 900px; margin: 0 auto 2rem; line-height: 1.8;">
+                49 in-depth articles on burnout, toxic leadership, family-work balance, generational dynamics, and
+                building healthier workplaces.
+            </p>
+            <div style="max-width: 500px; margin: 0 auto;">
+                <input type="text" id="resource-search"
+                    placeholder="Search articles... (e.g. burnout, boundaries, manager)"
+                    style="width: 100%; padding: 1rem 1.5rem; border-radius: 50px; border: 2px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); color: white; font-size: 1rem; outline: none; backdrop-filter: blur(10px);">
+            </div>
+            <div id="search-tags"
+                style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+                <button class="search-tag" onclick="filterByTag('burnout')"
+                    style="padding: 0.3rem 0.8rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; color: white; font-size: 0.8rem; cursor: pointer;">Burnout</button>
+                <button class="search-tag" onclick="filterByTag('manager')"
+                    style="padding: 0.3rem 0.8rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; color: white; font-size: 0.8rem; cursor: pointer;">Management</button>
+                <button class="search-tag" onclick="filterByTag('family')"
+                    style="padding: 0.3rem 0.8rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; color: white; font-size: 0.8rem; cursor: pointer;">Family</button>
+                <button class="search-tag" onclick="filterByTag('culture')"
+                    style="padding: 0.3rem 0.8rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; color: white; font-size: 0.8rem; cursor: pointer;">Culture</button>
+                <button class="search-tag" onclick="filterByTag('generation')"
+                    style="padding: 0.3rem 0.8rem; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; color: white; font-size: 0.8rem; cursor: pointer;">Generational</button>
+                <button class="search-tag" onclick="filterByTag('')"
+                    style="padding: 0.3rem 0.8rem; background: rgba(16,185,129,0.3); border: 1px solid #10b981; border-radius: 20px; color: white; font-size: 0.8rem; cursor: pointer;">Show
+                    All</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="experts-take" style="background: #0f172a; padding: 6rem 0; color: white;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title"
+                    style="color: white; font-family: 'Playfair Display', serif; font-size: 2.5rem;">Listen to the
+                    Experts</h2>
+                <p class="section-subtitle" style="color: #94a3b8; font-size: 1.1rem;">Real-world insights from the AWW
+                    leadership and global wellness architects.</p>
+            </div>
+
+            <div class="portal-grid">
+                <article class="card animate-on-scroll"
+                    style="padding: 0; overflow: hidden; border: 1px solid #334155; border-radius: 20px;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; background: #000;">
+                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                            src="https://www.youtube.com/embed/RodMLCfgFfw?rel=0&modestbranding=1"
+                            title="Building Resilience" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div style="padding: 1.5rem; background: #1e293b;">
+                        <h4 style="color: white; margin-bottom: 0.5rem;">Building Resilience</h4>
+                        <p style="color: #94a3b8; font-size: 0.9rem;">Strategies for sustainable mental health in
+                            high-pressure environments.</p>
+                    </div>
+                </article>
+                <article class="card animate-on-scroll delay-100"
+                    style="padding: 0; overflow: hidden; border: 1px solid #334155; border-radius: 20px;">
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; background: #000;">
+                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                            src="https://www.youtube.com/embed/G0XUimJbz44?rel=0&modestbranding=1"
+                            title="The Future of Work" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <div style="padding: 1.5rem; background: #1e293b;">
+                        <h4 style="color: white; margin-bottom: 0.5rem;">The Future of Work</h4>
+                        <p style="color: #94a3b8; font-size: 0.9rem;">Adapting organizational culture for the next
+                            generation of talent.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top: 6rem;">
+        <div class="container">
+            <!-- Pillar 1: Personal Mastery -->
+            <div class="resource-section">
+                <h2 class="animate-on-scroll">1. Personal Mastery & Mental Wellness</h2>
+                <div class="portal-grid">
+                    <div class="portal-card animate-on-scroll">
+                        <div
+                            style="height: 220px; background-image: url('https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="portal-card-body">
+                            <h3>Employee Wellness Portal</h3>
+                            <p>Tactical protocols for managing cognitive load and understanding your statutory rights
+                                when workplace demands exceed contractual boundaries.</p>
+                            <ul class="topics">
+                                <li><strong>The 6pm Buffer:</strong> Reclaiming personal space.</li>
+                                <li><strong>Statutory Rights:</strong> Navigating the Employment Act.</li>
+                            </ul>
+                            <a href="resources/your-wellness.html" class="cta-button" style="margin-top: auto;">Master
+                                Your Wellness</a>
+                        </div>
+                    </div>
+                    <div class="portal-card animate-on-scroll delay-100">
+                        <div
+                            style="height: 220px; background-image: url('https://images.unsplash.com/photo-1485217988980-11786ced9454?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="portal-card-body">
+                            <h3>The Next-Gen Strategy</h3>
+                            <p>For the generation redefining the professional contract. Pivot from reactive boundaries
+                                to proactive high-impact performance architecture.</p>
+                            <ul class="topics">
+                                <li><strong>Resilience as Capital:</strong> Sustainable career paths.</li>
+                                <li><strong>Digital Hygiene:</strong> Remote work mental health.</li>
+                            </ul>
+                            <a href="resources/generational-gap.html" class="cta-button" style="margin-top: auto;">View
+                                Gen Z Guide</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pillar 2: Strategic Leadership -->
+            <div class="resource-section">
+                <h2 class="animate-on-scroll">2. Strategic Leadership & ROI</h2>
+                <div class="portal-grid">
+                    <div class="portal-card animate-on-scroll">
+                        <div
+                            style="height: 220px; background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="portal-card-body">
+                            <h3>The Healthy Business Protocol</h3>
+                            <p>For Proprietors and C-Suite Executives. Quantify the fiscal impact of absenteeism and
+                                presenteeism on your annual valuation.</p>
+                            <ul class="topics">
+                                <li><strong>The ROI Matrix:</strong> Wellness in financial terms.</li>
+                                <li><strong>Brand Integrity:</strong> Retention through advocacy.</li>
+                            </ul>
+                            <a href="resources/healthy-business.html" class="cta-button"
+                                style="margin-top: auto;">Access Business Strategy</a>
+                        </div>
+                    </div>
+                    <div class="portal-card animate-on-scroll delay-100">
+                        <div
+                            style="height: 220px; background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="portal-card-body">
+                            <h3>Management Toolkit</h3>
+                            <p>Practical blueprints for organizational leaders. Detect silent burnout and manage team
+                                connectivity without compromising KPIs.</p>
+                            <ul class="topics">
+                                <li><strong>Burnout Detection:</strong> Markers of team fatigue.</li>
+                                <li><strong>Leadership Communication:</strong> Critical feedback.</li>
+                            </ul>
+                            <a href="resources/managing-workforce.html" class="cta-button"
+                                style="margin-top: auto;">Open Toolkit</a>
+                        </div>
+                    </div>
+                    <div class="portal-card animate-on-scroll delay-200">
+                        <div
+                            style="height: 220px; background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="portal-card-body">
+                            <h3>Corporate Emotional Valves</h3>
+                            <p>A strategic HR deep-dive into policy governance, exit interviews, and forensic
+                                psychosocial investigation protocols.</p>
+                            <ul class="topics">
+                                <li><strong>Policy Realities:</strong> Beyond "Pinned Documents."</li>
+                                <li><strong>Investigation Protocols:</strong> Root cause analysis.</li>
+                            </ul>
+                            <a href="resources/corporate-emotional-valves.html" class="cta-button"
+                                style="margin-top: auto;">View HR Strategy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pillar 3: Holistic Systems -->
+            <div class="resource-section">
+                <h2 class="animate-on-scroll">3. Holistic Support Systems</h2>
+                <div class="portal-grid">
+                    <div class="portal-card animate-on-scroll">
+                        <div
+                            style="height: 220px; background-image: url('https://images.unsplash.com/photo-1484981138541-3d074aa4323c?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="portal-card-body">
+                            <h3>Families & Carers Hub</h3>
+                            <p>Protecting the domestic sanctuary from professional spillover. Strategies for household
+                                resilience in high-stress sectors.</p>
+                            <ul class="topics">
+                                <li><strong>The 6pm Buffer:</strong> Reclaiming the sanctuary.</li>
+                                <li><strong>Carer Resilience:</strong> Supporting the professional.</li>
+                            </ul>
+                            <a href="resources/families.html" class="cta-button" style="margin-top: auto;">Access Family
+                                Hub</a>
+                        </div>
+                    </div>
+                    <div class="portal-card animate-on-scroll delay-100">
+                        <div
+                            style="height: 220px; background-image: url('https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=800&q=80'); background-size: cover; background-position: center;">
+                        </div>
+                        <div class="portal-card-body">
+                            <h3>Crisis Support Directory</h3>
+                            <p>Rapid access to verified Kenyan clinical interventions, emergency hotlines, and
+                                specialized trauma support services.</p>
+                            <ul class="topics">
+                                <li><strong>Verified Clinical Partners:</strong> Immediate referrals.</li>
+                                <li><strong>24/7 Hotlines:</strong> Zero-cost crisis stabilization.</li>
+                            </ul>
+                            <a href="find-help.html" class="cta-button" style="margin-top: auto;">Get Help Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer></footer>
+    <script src="assets/js/layout.js"></script>
+    <script>
+        // Resource Search & Filter
+        const searchInput = document.getElementById('resource-search');
+        if (searchInput) {
+            searchInput.addEventListener('input', function () {
+                const q = this.value.toLowerCase().trim();
+                filterResources(q);
+            });
+        }
+
+        function filterByTag(tag) {
+            const searchInput = document.getElementById('resource-search');
+            if (searchInput) searchInput.value = tag;
+            filterResources(tag.toLowerCase());
+        }
+
+        function filterResources(query) {
+            const cards = document.querySelectorAll('.portal-card');
+            const sections = document.querySelectorAll('.resource-section');
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (!query || text.includes(query)) {
+                    card.style.display = '';
+                    card.style.opacity = '1';
+                } else {
+                    card.style.display = 'none';
+                    card.style.opacity = '0';
+                }
+            });
+
+            // Hide empty sections
+            sections.forEach(section => {
+                const visible = section.querySelectorAll('.portal-card:not([style*="display: none"])');
+                section.style.display = visible.length > 0 ? '' : 'none';
+            });
+        }
+    </script>
+
+</body>
+
+</html>

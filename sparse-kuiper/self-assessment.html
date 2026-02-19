@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Burnout Self-Assessment | Workplace Wellness Africa</title>
+    <meta name="description"
+        content="Take our free, confidential burnout and workplace stress self-assessment. Get instant results and personalised recommendations. No signup required.">
+    <meta property="og:title" content="Free Burnout Self-Assessment | Workplace Wellness Africa">
+    <meta property="og:description"
+        content="How close to burnout are you? Take this 2-minute self-assessment and find out — completely free and confidential.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://workplacewellnessafrica.org/self-assessment.html">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <style>
+        .assess-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #042c22 0%, #064e3b 50%, #065f46 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .assess-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .assess-hero p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            max-width: 650px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .assess-hero .badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #6ee7b7;
+        }
+
+        .assess-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .question-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #059669;
+            transition: box-shadow 0.3s;
+        }
+
+        .question-card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .question-card h3 {
+            font-size: 1.05rem;
+            color: #1e293b;
+            margin-bottom: 0.3rem;
+            font-weight: 600;
+        }
+
+        .question-num {
+            color: #059669;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .option-btn {
+            padding: 0.75rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            background: #f8fafc;
+            cursor: pointer;
+            text-align: left;
+            font-size: 0.95rem;
+            color: #475569;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .option-btn:hover {
+            border-color: #10b981;
+            background: #ecfdf5;
+            color: #064e3b;
+        }
+
+        .option-btn.selected {
+            border-color: #059669;
+            background: #d1fae5;
+            color: #064e3b;
+            font-weight: 600;
+        }
+
+        .progress-bar-wrap {
+            background: #e2e8f0;
+            border-radius: 50px;
+            height: 8px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #059669, #10b981);
+            border-radius: 50px;
+            transition: width 0.4s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #submit-btn {
+            display: none;
+            width: 100%;
+            padding: 1rem;
+            background: #059669;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        #submit-btn:hover {
+            background: #047857;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
+        }
+
+        #submit-btn:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Results */
+        .results-panel {
+            display: none;
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .score-ring {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 2.5rem;
+            font-weight: 800;
+            position: relative;
+        }
+
+        .score-ring .label {
+            font-size: 0.8rem;
+            font-weight: 500;
+            opacity: 0.7;
+        }
+
+        .result-level {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-desc {
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .result-recs {
+            text-align: left;
+            margin-top: 2rem;
+        }
+
+        .result-recs h3 {
+            font-size: 1.1rem;
+            color: #064e3b;
+            margin-bottom: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .rec-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f0fdf4;
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .rec-item .icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .rec-item .text {
+            font-size: 0.9rem;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .rec-item a {
+            color: #059669;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .rec-item a:hover {
+            text-decoration: underline;
+        }
+
+        .result-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .result-actions a,
+        .result-actions button {
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-family: inherit;
+            border: none;
+        }
+
+        .btn-share {
+            background: #25D366;
+            color: white;
+        }
+
+        .btn-retake {
+            background: #f1f5f9;
+            color: #475569;
+        }
+
+        .btn-talk {
+            background: #059669;
+            color: white;
+        }
+
+        .privacy-note {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="assess-hero">
+        <div>
+            <span class="badge">🔒 100% Confidential — No data leaves your browser</span>
+            <h1>Burnout Self-Assessment</h1>
+            <p>Answer 12 honest questions about your work life. Takes about 2 minutes. You'll get instant results with
+                personalised recommendations — completely free.</p>
+        </div>
+    </section>
+
+    <div class="assess-container">
+        <div id="quiz-section">
+            <div class="progress-text"><span id="progress-count">0</span> of 12 answered</div>
+            <div class="progress-bar-wrap">
+                <div class="progress-bar-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+
+            <div id="questions-container"></div>
+            <button id="submit-btn" onclick="calculateResults()" disabled>See My Results</button>
+        </div>
+
+        <div class="results-panel" id="results-panel"></div>
+
+        <div class="privacy-note">
+            🔒 <strong>Your privacy matters.</strong> This assessment runs entirely in your browser. No data is sent to
+            any server. No one — including us — can see your answers. <a href="privacy.html"
+                style="color: #059669;">Read our Privacy Policy</a>.
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                q: "How often do you feel emotionally drained at the end of a workday?",
+                cat: "exhaustion",
+                opts: ["Rarely — I usually have energy left", "Sometimes — maybe once or twice a week", "Often — most days feel draining", "Always — I'm running on empty"]
+            },
+            {
+                q: "When you wake up on a work morning, what's your first feeling?",
+                cat: "exhaustion",
+                opts: ["Ready to go — I look forward to work", "Neutral — it's just another day", "Dread — I don't want to go", "Despair — I struggle to get out of bed"]
+            },
+            {
+                q: "How would you describe your sleep in the past month?",
+                cat: "exhaustion",
+                opts: ["Good — I sleep well most nights", "Okay — some restless nights", "Poor — I often can't sleep or wake up tired", "Terrible — insomnia or exhaustion despite sleeping"]
+            },
+            {
+                q: "Do you feel that your work actually matters?",
+                cat: "cynicism",
+                opts: ["Yes — I see the impact of what I do", "Mostly — but I sometimes question it", "Rarely — it often feels pointless", "Never — I've completely lost the sense of purpose"]
+            },
+            {
+                q: "How do you feel about your colleagues and workplace relationships?",
+                cat: "cynicism",
+                opts: ["Connected — I genuinely enjoy my team", "Okay — we get along fine", "Distant — I've pulled away from people", "Hostile — I resent many of my colleagues"]
+            },
+            {
+                q: "When asked about your job, how would you honestly describe it?",
+                cat: "cynicism",
+                opts: ["Fulfilling — I'd recommend my workplace", "Fine — it pays the bills", "Frustrating — I complain about it often", "Toxic — I'm actively looking to leave"]
+            },
+            {
+                q: "How confident are you in your ability to do your job well?",
+                cat: "efficacy",
+                opts: ["Very confident — I'm good at what I do", "Mostly confident — occasional self-doubt", "Uncertain — I question my skills often", "Lost — I feel incompetent most of the time"]
+            },
+            {
+                q: "How often do you make mistakes or forget things at work?",
+                cat: "efficacy",
+                opts: ["Rarely — I'm on top of things", "Sometimes — the occasional slip", "Often — more than I used to", "Constantly — my performance has noticeably declined"]
+            },
+            {
+                q: "Do you feel you have control over your workload?",
+                cat: "efficacy",
+                opts: ["Yes — I can manage and prioritise", "Mostly — with some overwhelming moments", "Rarely — the workload controls me", "Never — I'm drowning and can't catch up"]
+            },
+            {
+                q: "How often do you use weekends to recover from work?",
+                cat: "balance",
+                opts: ["Sometimes — but I also enjoy hobbies", "Often — weekends are mostly for resting", "Always — I need every minute to recover", "Not enough — even weekends don't restore me"]
+            },
+            {
+                q: "Have you noticed any physical symptoms like headaches, stomach issues, or tension?",
+                cat: "balance",
+                opts: ["No — I feel physically fine", "Occasionally — minor issues", "Regularly — it's becoming a pattern", "Constantly — my body is telling me something's wrong"]
+            },
+            {
+                q: "If a friend described your exact work situation, what would you tell them?",
+                cat: "balance",
+                opts: ["It sounds manageable — keep going", "Watch it — take some time for yourself", "This isn't sustainable — something needs to change", "Get out — this is damaging your health"]
+            }
+        ];
+
+        const answers = new Array(12).fill(-1);
+
+        function renderQuestions() {
+            const container = document.getElementById('questions-container');
+            questions.forEach((q, i) => {
+                const card = document.createElement('div');
+                card.className = 'question-card';
+                card.id = `q-${i}`;
+                card.innerHTML = `
+                    <div class="question-num">Question ${i + 1}</div>
+                    <h3>${q.q}</h3>
+                    <div class="options">
+                        ${q.opts.map((opt, j) => `
+                            <button class="option-btn" data-q="${i}" data-v="${j}" onclick="selectOption(${i}, ${j}, this)">${opt}</button>
+                        `).join('')}
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function selectOption(qIndex, value, btn) {
+            answers[qIndex] = value;
+            // Clear previous selection
+            const card = document.getElementById(`q-${qIndex}`);
+            card.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const answered = answers.filter(a => a >= 0).length;
+            document.getElementById('progress-count').textContent = answered;
+            document.getElementById('progress-fill').style.width = `${(answered / 12) * 100}%`;
+            const btn = document.getElementById('submit-btn');
+            btn.style.display = 'block';
+            btn.disabled = answered < 12;
+        }
+
+        function calculateResults() {
+            const total = answers.reduce((sum, a) => sum + a, 0);
+            const maxScore = 36; // 12 questions × 3 (max per question)
+            const percentage = Math.round((total / maxScore) * 100);
+
+            let level, color, desc, recs;
+
+            if (percentage <= 25) {
+                level = "🟢 Low Risk — You're Doing Well";
+                color = "#059669";
+                desc = "Your scores suggest you're managing your work-life balance effectively right now. You have energy, purpose, and a reasonable sense of control. That's genuinely impressive in today's work environment — but don't take it for granted. The best time to build resilience is when things are going well.";
+                recs = [
+                    { icon: "📖", text: `Explore our <a href="resources/your-wellness.html">Personal Wellness</a> articles to maintain your balance`, link: "resources/your-wellness.html" },
+                    { icon: "🛡️", text: `Read about <a href="resources/your-wellness.html">building real boundaries</a> before you need them`, link: "resources/your-wellness.html" },
+                    { icon: "📬", text: `Subscribe to our newsletter for monthly wellness tips`, link: "#" },
+                ];
+            } else if (percentage <= 50) {
+                level = "🟡 Moderate Risk — Early Warning Signs";
+                color = "#eab308";
+                desc = "You're showing some early signs of workplace stress. You might be managing for now, but there are cracks forming. This is actually the most important stage — because this is where intervention is most effective. Don't wait for things to get worse.";
+                recs = [
+                    { icon: "🔥", text: `Read: <a href="resources/your-wellness.html">Burnout Isn't a Badge of Honour</a> — understanding what's happening in your body`, link: "resources/your-wellness.html" },
+                    { icon: "⚖️", text: `Read: <a href="resources/families.html">When \"Having It All\" Means Carrying Everything</a>`, link: "resources/families.html" },
+                    { icon: "💬", text: `Talk to us — our <a href="contact.html">free consultation</a> can help you create a personalised plan`, link: "contact.html" },
+                    { icon: "📊", text: `HR leaders: Consider a <a href="services/corporate-audit.html">Corporate Wellness Audit</a>`, link: "services/corporate-audit.html" },
+                ];
+            } else if (percentage <= 75) {
+                level = "🟠 High Risk — Burnout Zone";
+                color = "#f97316";
+                desc = "Your responses indicate significant burnout symptoms. This isn't just stress — this is your body and mind telling you that the current pace isn't sustainable. Many people in this zone think they can push through. They can't. What they can do is act now, before it gets worse.";
+                recs = [
+                    { icon: "🚨", text: `Priority Read: <a href="resources/your-wellness.html">What Recovery Actually Looks Like</a> — burnout recovery is biological, not motivational`, link: "resources/your-wellness.html" },
+                    { icon: "🏢", text: `Read: <a href="resources/corporate-emotional-valves.html">The Sunday Night Dread Factory</a> — you're not alone in this`, link: "resources/corporate-emotional-valves.html" },
+                    { icon: "🤝", text: `<a href="contact.html">Talk to our team</a> — we can help you build a recovery plan or work with your employer`, link: "contact.html" },
+                    { icon: "📞", text: `WhatsApp us directly: <a href="https://wa.me/254745710078">+254 745 710 078</a>`, link: "https://wa.me/254745710078" },
+                ];
+            } else {
+                level = "🔴 Critical Risk — Urgent Attention Needed";
+                color = "#ef4444";
+                desc = "Your scores suggest you're in crisis. This level of exhaustion, cynicism, and reduced effectiveness is not sustainable and can lead to serious mental and physical health consequences. Please take this seriously. You deserve better than this — and help is available right now.";
+                recs = [
+                    { icon: "🆘", text: `If you're in immediate distress, call Kenya Red Cross: <strong>1199</strong> or Befrienders Kenya: <strong>+254 722 178 177</strong>`, link: "find-help.html" },
+                    { icon: "❤️", text: `Read: <a href="find-help.html">Find Help Now</a> — crisis resources available 24/7`, link: "find-help.html" },
+                    { icon: "💬", text: `<a href="https://wa.me/254745710078">WhatsApp us now</a> — we respond quickly and everything is confidential`, link: "https://wa.me/254745710078" },
+                    { icon: "📖", text: `When you're ready: <a href="resources/your-wellness.html">Recovery resources</a> written for people in your exact situation`, link: "resources/your-wellness.html" },
+                ];
+            }
+
+            // Show results
+            document.getElementById('quiz-section').style.display = 'none';
+            const panel = document.getElementById('results-panel');
+            panel.style.display = 'block';
+
+            // Calculate dimension scores
+            const dims = { exhaustion: 0, cynicism: 0, efficacy: 0, balance: 0 };
+            questions.forEach((q, i) => { dims[q.cat] += answers[i]; });
+
+            panel.innerHTML = `
+                <div class="score-ring" style="background: linear-gradient(135deg, ${color}22, ${color}11); border: 4px solid ${color};">
+                    <span style="color: ${color};">${percentage}%</span>
+                    <span class="label">Burnout Risk</span>
+                </div>
+                <div class="result-level" style="color: ${color};">${level}</div>
+                <p class="result-desc">${desc}</p>
+
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; text-align:left;">
+                    <div style="padding:1rem; background:#f8fafc; border-radius:10px;">
+                        <div style="font-size:0.75rem; text-transform:uppercase; color:#64748b; letter-spacing:1px;">Exhaustion</div>
+                        <div style="font-size:1.3rem; font-weight:700; color:${dims.exhaustion > 6 ? '#ef4444' : dims.exhaustion > 3 ? '#eab308' : '#059669'};">${dims.exhaustion}/9</div>
+                    </div>
+                    <div style="padding:1rem; background:#f8fafc; border-radius:10px;">
+                        <div style="font-size:0.75rem; text-transform:uppercase; color:#64748b; letter-spacing:1px;">Cynicism</div>
+                        <div style="font-size:1.3rem; font-weight:700; color:${dims.cynicism > 6 ? '#ef4444' : dims.cynicism > 3 ? '#eab308' : '#059669'};">${dims.cynicism}/9</div>
+                    </div>
+                    <div style="padding:1rem; background:#f8fafc; border-radius:10px;">
+                        <div style="font-size:0.75rem; text-transform:uppercase; color:#64748b; letter-spacing:1px;">Reduced Efficacy</div>
+                        <div style="font-size:1.3rem; font-weight:700; color:${dims.efficacy > 6 ? '#ef4444' : dims.efficacy > 3 ? '#eab308' : '#059669'};">${dims.efficacy}/9</div>
+                    </div>
+                    <div style="padding:1rem; background:#f8fafc; border-radius:10px;">
+                        <div style="font-size:0.75rem; text-transform:uppercase; color:#64748b; letter-spacing:1px;">Work-Life Balance</div>
+                        <div style="font-size:1.3rem; font-weight:700; color:${dims.balance > 6 ? '#ef4444' : dims.balance > 3 ? '#eab308' : '#059669'};">${dims.balance}/9</div>
+                    </div>
+                </div>
+
+                <div class="result-recs">
+                    <h3>What You Can Do Next</h3>
+                    ${recs.map(r => `<div class="rec-item"><span class="icon">${r.icon}</span><div class="text">${r.text}</div></div>`).join('')}
+                </div>
+
+                <div class="result-actions">
+                    <a href="https://wa.me/?text=I%20just%20took%20a%20burnout%20self-assessment%20at%20Workplace%20Wellness%20Africa.%20You%20should%20try%20it%20too:%20https://workplacewellnessafrica.org/self-assessment.html" target="_blank" class="btn-share">Share on WhatsApp</a>
+                    <a href="contact.html" class="btn-talk">Talk to Us Free</a>
+                    <button class="btn-retake" onclick="retake()">Retake Assessment</button>
+                </div>
+            `;
+            panel.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function retake() {
+            answers.fill(-1);
+            document.getElementById('results-panel').style.display = 'none';
+            document.getElementById('quiz-section').style.display = 'block';
+            document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+            updateProgress();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        renderQuestions();
+    </script>
+
+    <script src="assets/js/layout.js"></script>
+</body>
+
+</html>
